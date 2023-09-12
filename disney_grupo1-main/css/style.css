@@ -1,0 +1,27 @@
+.enlaces_acercaDe{
+    text-decoration: none;
+}
+
+.strong_color {
+    color: #051352;
+}
+
+.lista-articulos{
+   list-style: none;
+}
+
+/* Pagina contacto */
+
+.decoration {
+    text-decoration: none;
+}
+.cards {
+    width: 100px;
+
+  margin-left: 35%;
+}
+@media (width <= 576px) {
+    .cards {
+        margin-left: 20%;
+    }
+}
