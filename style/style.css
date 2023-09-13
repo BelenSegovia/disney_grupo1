@@ -7,9 +7,16 @@
 
 body {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    background: radial-gradient(#2C2F42, #161824);
+}
+
+main {
+    position: relative;
+    left: 78px;
+    margin-right: 80px;
 }
 
 .sidebar {
@@ -220,21 +227,6 @@ body {
 
 .sidebar.active .nav-list .sub-menu.active .more-options a{
     padding: 0 15px;
-}
-
-.home_content {
-    position: absolute;
-    height: 100%;
-    width: calc(100% - 78px);
-    left: 78px;
-    transition: all 0.5s ease;
-}
-
-.home_content .text {
-    font-size: 25px;
-    font-weight: 500;
-    color: #1D1F2B;
-    margin: 12px;
 }
 
 #secContainer {
