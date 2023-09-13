@@ -20,8 +20,15 @@
 
   margin-left: 35%;
 }
+.fondo {
+    background-color: #040714;
+}
+.fondo_titulo {
+    background-color: #030235;
+}
+
 @media (width <= 576px) {
     .cards {
-        margin-left: 20%;
+        margin-left: 35%;
     }
 }
