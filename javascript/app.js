@@ -1,9 +1,9 @@
-let btn = document.querySelector('#btn');
-let sidebar = document.querySelector('.sidebar');
-let searchBtn = document.querySelector('.btn_busqueda');
-let linkName = document.querySelector('.links-name');
-let btnUser = document.querySelector('.profile_content');
-let subMenu = document.querySelector('.sub-menu')
+const btn = document.querySelector('#btn');
+const sidebar = document.querySelector('.sidebar');
+const searchBtn = document.querySelector('.btn_busqueda');
+const linkName = document.querySelector('.links-name');
+const btnUser = document.querySelector('.profile_content');
+const subMenu = document.querySelector('.sub-menu')
 
 btn.onclick = () => {
     sidebar.classList.toggle('active');
