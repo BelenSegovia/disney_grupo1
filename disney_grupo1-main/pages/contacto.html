@@ -32,9 +32,103 @@
       ></script>
     </head>
     <body>
-      <header></header>
+      <header>
+        <nav class="sidebar">
+          <div class="logo_content">
+            <div class="logo">
+              <img
+                src="/img/20220128173228!Disney+_logo.svg"
+                alt="Logo de disney+"
+              />
+            </div>
+            <i class="fa-solid fa-bars" id="btn"></i>
+          </div>
+
+          <ul class="nav-list">
+            <li>
+              <div class="profile_content">
+                <div class="profile">
+                  <div class="profile_details">
+                    <i class="fa-solid fa-circle-user" id="user_img"></i>
+                    <div class="profile_name">Usuario</div>
+                  </div>
+                </div>
+              </div>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">
+                    <i
+                      class="fa-solid fa-circle-plus"
+                      style="color: #ffffff"
+                    ></i>
+                    <span>Agregar perfil</span>
+                  </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Editar perfiles </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Ajustes de aplicacion </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Editar perfiles </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Ajustes de aplicacion </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Cuenta </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Cancelar suscripcion </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Ayuda </a>
+                </li>
+                <li class="more-options">
+                  <a href="#"> Cerrar sesion </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass btn_busqueda"></i>
+              <input type="text" placeholder="Busqueda" />
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-house"></i>
+                <span class="links-name">Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-plus"></i>
+                <span class="links-name">Mi Lista</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-star"></i>
+                <span class="links-name">Originales</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-film"></i>
+                <span class="links-name">Peliculas</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-tv"></i>
+                <span class="links-name">Series</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <main class="fondo">
-        <section class="my-5 py-5 text-center fondo_titulo">
+        <section class="mb-5 py-5 text-center fondo_titulo">
           <h1 class="text-light">Centro de ayuda</h1>
         </section>
         <section class="container fondo_titulo">
@@ -61,62 +155,70 @@
                     aria-labelledby="heading1"
                     data-bs-parent="#accordion1"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body bg-dark">
                       <!-- Formulario 1 -->
-                      <form id="form-contacto">
+                      <form id="form-contacto" class="bg-dark text-primary">
                         <fieldset class="mb-2">
-                          <label for="input-nombre" class="form-label"
+                          <label
+                            for="input-nombre"
+                            class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
                             id="input-nombre"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
                           </div>
                         </fieldset>
                         <fieldset class="mb-2">
-                          <label for="input-email" class="form-label"
+                          <label
+                            for="input-email"
+                            class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
                             id="input-email"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
                           </div>
                         </fieldset>
                         <fieldset class="mb-2">
-                          <label for="input-numero" class="form-label"
+                          <label
+                            for="input-numero"
+                            class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
                             id="input-numero"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
                           </div>
                         </fieldset>
                         <fieldset class="mb-2">
-                          <label for="input-notas" class="form-label"
+                          <label
+                            for="input-notas"
+                            class="form-label bg-dark text-primary"
                             >Amplianos tu consulta</label
                           >
                           <textarea
                             id="input-notas"
-                            class="form-control"
+                            class="form-control bg-dark te"
                           ></textarea>
                         </fieldset>
                         <div class="text-end mt-3">
-                          <button type="submit" class="btn btn-danger">
+                          <button type="submit" class="btn btn-primary">
                             Guardar
                           </button>
                         </div>
@@ -145,62 +247,70 @@
                     aria-labelledby="heading2"
                     data-bs-parent="#accordion1"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body bg-dark">
                       <!-- Formulario 2 -->
-                      <form id="form-contacto">
-                        <fieldset class="mb-2">
-                          <label for="input-nombre" class="form-label"
+                      <form id="form-contacto" class="bg-dark text-primary">
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-nombre"
+                            class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
                             id="input-nombre"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-email" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-email"
+                            class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
                             id="input-email"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-numero" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-numero"
+                            class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
                             id="input-numero"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-notas" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-notas"
+                            class="form-label bg-dark text-primary"
                             >Amplianos tu consulta</label
                           >
                           <textarea
                             id="input-notas"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
                         <div class="text-end mt-3">
-                          <button type="submit" class="btn btn-danger">
+                          <button type="submit" class="btn btn-primary">
                             Guardar
                           </button>
                         </div>
@@ -229,62 +339,70 @@
                     aria-labelledby="heading3"
                     data-bs-parent="#accordion1"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body bg-dark">
                       <!-- Formulario 3 -->
-                      <form id="form-contacto">
-                        <fieldset class="mb-2">
-                          <label for="input-nombre" class="form-label"
+                      <form id="form-contacto" class="bg-dark text-primary">
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-nombre"
+                            class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
                             id="input-nombre"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-email" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-email"
+                            class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
                             id="input-email"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-numero" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-numero"
+                            class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
                             id="input-numero"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-notas" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-notas"
+                            class="form-label bg-dark text-primary"
                             >Amplianos tu consulta</label
                           >
                           <textarea
                             id="input-notas"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
                         <div class="text-end mt-3">
-                          <button type="submit" class="btn btn-danger">
+                          <button type="submit" class="btn btn-primary">
                             Guardar
                           </button>
                         </div>
@@ -317,62 +435,70 @@
                     aria-labelledby="heading4"
                     data-bs-parent="#accordion2"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body bg-dark">
                       <!-- Formulario 4 -->
-                      <form id="form-contacto">
-                        <fieldset class="mb-2">
-                          <label for="input-nombre" class="form-label"
+                      <form id="form-contacto" class="bg-dark text-primary">
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-nombre"
+                            class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
                             id="input-nombre"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
                           </div>
                         </fieldset>
                         <fieldset class="mb-2">
-                          <label for="input-email" class="form-label"
+                          <label
+                            for="input-email"
+                            class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
                             id="input-email"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-numero" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-numero"
+                            class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
                             id="input-numero"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-notas" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-notas"
+                            class="form-label bg-dark text-primary"
                             >Amplianos tu consulta</label
                           >
                           <textarea
                             id="input-notas"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
                         <div class="text-end mt-3">
-                          <button type="submit" class="btn btn-danger">
+                          <button type="submit" class="btn btn-primary">
                             Guardar
                           </button>
                         </div>
@@ -401,62 +527,70 @@
                     aria-labelledby="heading5"
                     data-bs-parent="#accordion2"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body bg-dark">
                       <!-- Formulario 5 -->
-                      <form id="form-contacto">
-                        <fieldset class="mb-2">
-                          <label for="input-nombre" class="form-label"
+                      <form id="form-contacto" class="bg-dark text-primary">
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-nombre"
+                            class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
                             id="input-nombre"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
                           </div>
                         </fieldset>
                         <fieldset class="mb-2">
-                          <label for="input-email" class="form-label"
+                          <label
+                            for="input-email"
+                            class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
                             id="input-email"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-numero" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-numero"
+                            class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
                             id="input-numero"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-notas" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-notas"
+                            class="form-label bg-dark text-primary"
                             >Amplianos tu consulta</label
                           >
                           <textarea
                             id="input-notas"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
                         <div class="text-end mt-3">
-                          <button type="submit" class="btn btn-danger">
+                          <button type="submit" class="btn btn-primary">
                             Guardar
                           </button>
                         </div>
@@ -485,62 +619,70 @@
                     aria-labelledby="heading6"
                     data-bs-parent="#accordion2"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body bg-dark">
                       <!-- Formulario 6 -->
-                      <form id="form-contacto">
-                        <fieldset class="mb-2">
-                          <label for="input-nombre" class="form-label"
+                      <form id="form-contacto" class="bg-dark text-primary">
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-nombre"
+                            class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
                             id="input-nombre"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
                           </div>
                         </fieldset>
                         <fieldset class="mb-2">
-                          <label for="input-email" class="form-label"
+                          <label
+                            for="input-email"
+                            class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
                             id="input-email"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-numero" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-numero"
+                            class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
                             id="input-numero"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
                           </div>
                         </fieldset>
-                        <fieldset class="mb-2">
-                          <label for="input-notas" class="form-label"
+                        <fieldset class="mb-2 bg-dark text-primary">
+                          <label
+                            for="input-notas"
+                            class="form-label bg-dark text-primary"
                             >Amplianos tu consulta</label
                           >
                           <textarea
                             id="input-notas"
-                            class="form-control"
+                            class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
                         <div class="text-end mt-3">
-                          <button type="submit" class="btn btn-danger">
+                          <button type="submit" class="btn btn-primary">
                             Guardar
                           </button>
                         </div>
@@ -558,103 +700,206 @@
           <p>Estamos disponibles las 24 horas, los 365 días del año.</p>
         </section>
         <section class="container">
-        <article class="row">
-          <div class="card mb-3 col-md-6 col-sm-6" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="../img/icon_contactus.svg" class="img-fluid rounded-start" alt="img contacto">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Contáctanos</h5>
-                  <p class="card-text">¿Quieres chatear con nosotros? Es un gusto poder ayudarte.</p>
-                  <p href="./contacto.html" class="card-text text-bold"><a href="./contacto.html" class="text-primary decoration">Comunicate con nosotros</a></p>
+          <article class="row">
+            <div class="card mb-3 col-md-6 mx-2" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="../img/icon_contactus.svg"
+                    class="img-fluid rounded-start"
+                    alt="img contacto"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Contáctanos</h5>
+                    <p class="card-text">
+                      ¿Quieres chatear con nosotros? Es un gusto poder ayudarte.
+                    </p>
+                    <p href="./contacto.html" class="card-text text-bold">
+                      <a href="./contacto.html" class="text-primary decoration"
+                        >Comunicate con nosotros</a
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card mb-3 col-md-6 mx-2" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="../img/icon_feedback.svg" class="img-fluid rounded-start" alt="img comentarios">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Comentarios</h5>
-                  <p class="card-text">Dinos cómo podemos mejorar Disney+ en nuestro formulario de comentarios..</p>
-                  <p class="card-text text-bold"><a href="./contacto.html" class="text-primary decoration">Enviar comentarios</a></p>
+            <div class="card mb-3 col-md-6 mx-2" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="../img/icon_feedback.svg"
+                    class="img-fluid rounded-start"
+                    alt="img comentarios"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Comentarios</h5>
+                    <p class="card-text">
+                      Dinos cómo podemos mejorar Disney+ en nuestro formulario
+                      de comentarios..
+                    </p>
+                    <p class="card-text text-bold">
+                      <a href="./contacto.html" class="text-primary decoration"
+                        >Enviar comentarios</a
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
-      </section>
-      <h2 class="text-light">Más opciones</h2>
-      <section class="container mt-4">
-        <article class="row">
+          </article>
+        </section>
+        <section class="my-5 py-5 text-center text-light fondo_titulo">
+          <h2>Más opciones</h2>
+        </section>
+        <section class="container mt-4">
+          <article class="row">
+            <!--CARD QUE ME LLEVAN A UNA PAGINA DE ERROR 404-->
             <!-- Tarjeta 1 -->
-            <div class="col-lg-4  col-md-4 col-sm-6  mb-4">
-                <div class="card small-card text-center">
-                    <img src="../img/card_cohete.svg" class="card-img-top cards" alt="cohete">
-                    <div class="card-body">
-                        <h5 class="card-title">Comenzar</h5>
-                    </div>
-                </div>
-            </div>
-    
+            <a
+              href="#"
+              class="card col-lg-3 col-md-3 col-sm-4 mb-4 mx-auto boton_card"
+            >
+              <img
+                src="../img/card_cohete.svg"
+                class="card-img-top"
+                alt="img cohete"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Comenzar</h5>
+              </div>
+            </a>
+
             <!-- Tarjeta 2 -->
-            <div class="col-lg-4  col-md-4  col-sm-6  mb-4">
-                <div class="card small-card text-center"> 
-                    <img src="../img/card2_pagos.svg" class="card-img-top cards" alt="img facturación">
-                    <div class="card-body">
-                        <h5 class="card-title">Cuenta y facturación</h5>
-                    </div>
-                </div>
-            </div>
-    
+            <a
+              href="#"
+              class="card col-lg-3 col-md-3 col-sm-4 mb-4 mx-auto boton_card"
+            >
+              <img
+                src="../img/card2_pagos.svg"
+                class="card-img-top"
+                alt="img pagos"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Cuenta y facturación</h5>
+              </div>
+            </a>
+
             <!-- Tarjeta 3 -->
-            <div class="col-lg-4  col-md-4 col-sm-6  mb-4">
-                <div class="card small-card text-center">
-                    <img src="../img/card3_dispositivo.svg" class="card-img-top cards" alt="img dispositivos compatibles">
-                    <div class="card-body">
-                        <h5 class="card-title">Dispositivos compatibles</h5>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <article class="row">
+            <a
+              href=""
+              class="card col-lg-3 col-md-3 col-sm-4 mb-4 mx-auto boton_card"
+            >
+              <img
+                src="../img/card3_dispositivo.svg"
+                class="card-img-top"
+                alt="img Dispositivos"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Dispositivos compatibles</h5>
+              </div>
+            </a>
+          </article>
+          <article class="row">
             <!-- Tarjeta 4 -->
-            <div class="col-lg-4  col-md-4 col-sm-6  mb-4">
-                <div class="card small-card text-center">
-                    <img src="../img/card4_tablet.svg" class="card-img-top cards" alt="Pantalla">
-                    <div class="card-body">
-                        <h5 class="card-title">Ver Disney+</h5>
-                    </div>
-                </div>
-            </div>
+            <a
+              href="#"
+              class="card col-lg-3 col-md-3 col-sm-4 mb-4 mx-auto boton_card"
+            >
+              <img
+                src="../img/card4_tablet.svg"
+                class="card-img-top"
+                alt="img tablet"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Ver Disney+</h5>
+              </div>
+            </a>
             <!-- Tarjeta 5 -->
-            <div class="col-lg-4  col-md-4 col-sm-6 mb-4">
-                <div class="card small-card text-center">
-                    <img src="../img/card5_ayuda.svg" class="card-img-top cards" alt="ayuda">
-                    <div class="card-body">
-                        <h5 class="card-title">Solucionar un problema</h5>
-                    </div>
-                </div>
-            </div>
+            <a
+              href="#"
+              class="card col-lg-3 col-md-3 col-sm-4 mb-4 mx-auto boton_card"
+            >
+              <img
+                src="../img/card5_ayuda.svg"
+                class="card-img-top"
+                alt="img ayuda"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Solucionar un problema</h5>
+              </div>
+            </a>
             <!-- Tarjeta 6 -->
-            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                <div class="card small-card text-center">
-                    <img src="../img/card6_vincular.svg" class="card-img-top cards" alt="img vincular">
-                    <div class="card-body">
-                        <h5 class="card-title">Códigos de error</h5>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </section>
-    
+            <a
+              href="#"
+              class="card col-lg-3 col-md-3 col-sm-4 mb-4 mx-auto boton_card"
+            >
+              <img
+                src="../img/card6_vincular.svg"
+                class="card-img-top"
+                alt="img vincular"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Códigos de error</h5>
+              </div>
+            </a>
+          </article>
+        </section>
       </main>
-      <footer></footer>
+      <footer class="sidebar-footer">
+        <section class="d-flex text-center" id="secContainer">
+          <article class="boxInfo">
+            <ol>
+              <li>
+                <a class="fw-medium" href="">Politica de privacidad</a>
+              </li>
+              <li>
+                <a class="fw-medium" href="">Cancelar suscripcion</a>
+              </li>
+            </ol>
+          </article>
+          <article class="boxInfo">
+            <ol>
+              <li>
+                <a class="fw-medium" href="">Acuerdo de suscripcion</a>
+              </li>
+              <li>
+                <a class="fw-medium" href="">Acerca de Disney+</a>
+              </li>
+            </ol>
+          </article>
+          <article class="boxInfo">
+            <ol>
+              <li>
+                <a class="fw-medium" href="">Dispositivos compatibles</a>
+              </li>
+              <li>
+                <a class="fw-medium" href="">Ayuda</a>
+              </li>
+            </ol>
+          </article>
+          <article id="socialLinks">
+            <p class="ms-3">© Disney. Todos los derechos reservados</p>
+            <a href=""
+              ><img
+                id=""
+                src="/img/20220128173228!Disney+_logo.svg"
+                alt="Logo Disney+"
+            /></a>
+            <ol class="text-center">
+              <ul>
+                <a href="" target="_blank">Facebook</a>
+                <a href="" target="_blank">Instagram</a>
+                <a href="" target="_blank">Youtube</a>
+              </ul>
+            </ol>
+          </article>
+        </section>
+      </footer>
+      <script type="module" src="../js/app.js"></script>
     </body>
   </html>
 </html>
