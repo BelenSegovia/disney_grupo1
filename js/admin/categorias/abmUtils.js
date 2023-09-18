@@ -2,6 +2,8 @@
 //             Categorias
 //------------------------------------
 
+import { eliminarCategoria } from "./abm.js";
+
 export const obtenerCategoriasDeLS = () => {
     return JSON.parse(localStorage.getItem('categorias')) || [];
 }
@@ -43,11 +45,11 @@ export const crearFilaTabla = (categoria, indice) => {
 
 
     btnEditar.onclick = () => {
-        console.log(`Editar ${categoria}`)
+        prepararEdicionCategoria(categoria)
     }
 
     btnEliminar.onclick = () => {
-        console.log(`Eliminar ${categoria}`)
+        eliminarCategoria(categoria)
     }
     
     tdBotones.appendChild(btnEditar);
