@@ -7,6 +7,9 @@
       <meta name="description" content="Ayuda y contacto" />
       <meta name="keywords" content="Disney+, historia, nosotros, Mickey" />
       <meta name="author" content="Grupo-1" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    
       <link
         rel="shortcut icon"
         href="https://static-assets.bamgrid.com/product/disneyplus/favicons/safari-pinned-tab.f78e1debd6a0496471c542612d2e4bc5.svg"
@@ -26,6 +29,7 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"
       ></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script
         src="https://kit.fontawesome.com/8d13b22e35.js"
         crossorigin="anonymous"
@@ -37,7 +41,7 @@
           <div class="logo_content">
             <div class="logo">
               <img
-                src="/img/20220128173228!Disney+_logo.svg"
+                src="../img/20220128173228!Disney+_logo.svg"
                 alt="Logo de disney+"
               />
             </div>
@@ -157,7 +161,7 @@
                   >
                     <div class="accordion-body bg-dark">
                       <!-- Formulario 1 -->
-                      <form id="form-contacto" class="bg-dark text-primary">
+                      <form class="bg-dark text-primary form-contacto1">
                         <fieldset class="mb-2">
                           <label
                             for="input-nombre"
@@ -165,10 +169,11 @@
                             >Nombre</label
                           >
                           <input
+                          id="input-nombre"
                             placeholder="Juan Perez"
                             type="text"
-                            id="input-nombre"
-                            class="form-control bg-dark text-primary"
+                            maxlength="25"
+                            class="form-control bg-dark text-primary input-nombre1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
@@ -181,10 +186,11 @@
                             >Email</label
                           >
                           <input
+                          id="input-email"
                             placeholder="jperez@gmail.com"
                             type="text"
-                            id="input-email"
-                            class="form-control bg-dark text-primary"
+                            maxlength="50"
+                            class="form-control bg-dark text-primary input-email1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
@@ -197,10 +203,11 @@
                             >Telefono</label
                           >
                           <input
+                           id="input-numero"
                             placeholder="381 123 4567"
                             type="text"
-                            id="input-numero"
-                            class="form-control bg-dark text-primary"
+                            maxlength="10"
+                            class="form-control bg-dark text-primary input-numero1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
@@ -214,7 +221,8 @@
                           >
                           <textarea
                             id="input-notas"
-                            class="form-control bg-dark te"
+                            maxlength="100"
+                            class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
                         <div class="text-end mt-3">
@@ -249,18 +257,19 @@
                   >
                     <div class="accordion-body bg-dark">
                       <!-- Formulario 2 -->
-                      <form id="form-contacto" class="bg-dark text-primary">
+                      <form class="bg-dark text-primary form-contacto1">
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-nombre"
+                            for="input-nombre2"
                             class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
+                          id="input-nombre2"
                             placeholder="Juan Perez"
                             type="text"
-                            id="input-nombre"
-                            class="form-control bg-dark text-primary"
+                            maxlength="25"
+                            class="form-control bg-dark text-primary input-nombre1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
@@ -268,15 +277,16 @@
                         </fieldset>
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-email"
+                            for="input-email2"
                             class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
-                            id="input-email"
-                            class="form-control bg-dark text-primary"
+                            id="input-email2"
+                            maxlength="50"
+                            class="form-control bg-dark text-primary input-email1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
@@ -284,15 +294,16 @@
                         </fieldset>
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-numero"
+                            for="input-numero2"
                             class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
-                            id="input-numero"
-                            class="form-control bg-dark text-primary"
+                            id="input-numero2"
+                            maxlength="10"
+                            class="form-control bg-dark text-primary input-numero1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
@@ -306,6 +317,7 @@
                           >
                           <textarea
                             id="input-notas"
+                            maxlength="100"
                             class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
@@ -341,18 +353,19 @@
                   >
                     <div class="accordion-body bg-dark">
                       <!-- Formulario 3 -->
-                      <form id="form-contacto" class="bg-dark text-primary">
+                      <form class="bg-dark text-primary form-contacto1">
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-nombre"
+                            for="input-nombre3"
                             class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
-                            id="input-nombre"
-                            class="form-control bg-dark text-primary"
+                            maxlength="25"
+                            id="input-nombre3"
+                            class="form-control bg-dark text-primary input-nombre1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
@@ -360,15 +373,16 @@
                         </fieldset>
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-email"
+                            for="input-email3"
                             class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
-                            id="input-email"
-                            class="form-control bg-dark text-primary"
+                            maxlength="50"
+                            id="input-email3"
+                            class="form-control bg-dark text-primary input-email1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
@@ -376,15 +390,16 @@
                         </fieldset>
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-numero"
+                            for="input-numero3"
                             class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
-                            id="input-numero"
-                            class="form-control bg-dark text-primary"
+                            id="input-numero3"
+                            maxlength="10"
+                            class="form-control bg-dark text-primary input-numero1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
@@ -398,6 +413,7 @@
                           >
                           <textarea
                             id="input-notas"
+                            maxlength="100"
                             class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
@@ -437,18 +453,19 @@
                   >
                     <div class="accordion-body bg-dark">
                       <!-- Formulario 4 -->
-                      <form id="form-contacto" class="bg-dark text-primary">
+                      <form class="bg-dark text-primary form-contacto1">
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-nombre"
+                            for="input-nombre4"
                             class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
-                            id="input-nombre"
-                            class="form-control bg-dark text-primary"
+                            id="input-nombre4"
+                            maxlength="25"
+                            class="form-control bg-dark text-primary input-nombre1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
@@ -456,15 +473,16 @@
                         </fieldset>
                         <fieldset class="mb-2">
                           <label
-                            for="input-email"
+                            for="input-email4"
                             class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
-                            id="input-email"
-                            class="form-control bg-dark text-primary"
+                            id="input-email4"
+                            maxlength="50"
+                            class="form-control bg-dark text-primary input-email1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
@@ -472,15 +490,16 @@
                         </fieldset>
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-numero"
+                            for="input-numero4"
                             class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
-                            id="input-numero"
-                            class="form-control bg-dark text-primary"
+                            maxlength="10"
+                            id="input-numero4"
+                            class="form-control bg-dark text-primary input-numero1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
@@ -494,6 +513,7 @@
                           >
                           <textarea
                             id="input-notas"
+                            maxlength="100"
                             class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
@@ -529,18 +549,19 @@
                   >
                     <div class="accordion-body bg-dark">
                       <!-- Formulario 5 -->
-                      <form id="form-contacto" class="bg-dark text-primary">
+                      <form class="bg-dark text-primary form-contacto1">
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-nombre"
+                            for="input-nombre5"
                             class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
-                            id="input-nombre"
-                            class="form-control bg-dark text-primary"
+                            id="input-nombre5"
+                            maxlength="25"
+                            class="form-control bg-dark text-primary input-nombre1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
@@ -548,15 +569,16 @@
                         </fieldset>
                         <fieldset class="mb-2">
                           <label
-                            for="input-email"
+                            for="input-email5"
                             class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
-                            id="input-email"
-                            class="form-control bg-dark text-primary"
+                            id="input-email5"
+                            maxlength="50"
+                            class="form-control bg-dark text-primary input-email1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
@@ -564,15 +586,16 @@
                         </fieldset>
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-numero"
+                            for="input-numero5"
                             class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
-                            id="input-numero"
-                            class="form-control bg-dark text-primary"
+                            id="input-numero5"
+                            maxlength="10"
+                            class="form-control bg-dark text-primary input-numero1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
@@ -586,6 +609,7 @@
                           >
                           <textarea
                             id="input-notas"
+                            maxlength="100"
                             class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
@@ -621,18 +645,19 @@
                   >
                     <div class="accordion-body bg-dark">
                       <!-- Formulario 6 -->
-                      <form id="form-contacto" class="bg-dark text-primary">
+                      <form class="bg-dark text-primary form-contacto">
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-nombre"
+                            for="input-nombre6"
                             class="form-label bg-dark text-primary"
                             >Nombre</label
                           >
                           <input
                             placeholder="Juan Perez"
                             type="text"
-                            id="input-nombre"
-                            class="form-control bg-dark text-primary"
+                            id="input-nombre6"
+                            maxlength="25"
+                            class="form-control bg-dark text-primary input-nombre1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un nombre valido
@@ -640,15 +665,16 @@
                         </fieldset>
                         <fieldset class="mb-2">
                           <label
-                            for="input-email"
+                            for="input-email6"
                             class="form-label bg-dark text-primary"
                             >Email</label
                           >
                           <input
                             placeholder="jperez@gmail.com"
                             type="text"
-                            id="input-email"
-                            class="form-control bg-dark text-primary"
+                            id="input-email6"
+                            maxlength="50"
+                            class="form-control bg-dark text-primary input-email1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un email valido
@@ -656,15 +682,16 @@
                         </fieldset>
                         <fieldset class="mb-2 bg-dark text-primary">
                           <label
-                            for="input-numero"
+                            for="input-numero6"
                             class="form-label bg-dark text-primary"
                             >Telefono</label
                           >
                           <input
                             placeholder="381 123 4567"
                             type="text"
-                            id="input-numero"
-                            class="form-control bg-dark text-primary"
+                            id="input-numero6"
+                            maxlength="10"
+                            class="form-control bg-dark text-primary input-numero1"
                           />
                           <div class="invalid-feedback">
                             Ingrese un numero valido
@@ -678,6 +705,7 @@
                           >
                           <textarea
                             id="input-notas"
+                            maxlength="100"
                             class="form-control bg-dark text-primary"
                           ></textarea>
                         </fieldset>
@@ -900,6 +928,9 @@
         </section>
       </footer>
       <script type="module" src="../js/app.js"></script>
+      <script defer src="path-to-the-file/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     </body>
   </html>
 </html>

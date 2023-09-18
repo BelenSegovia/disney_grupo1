@@ -1,55 +1,82 @@
 'use strict'
 import { validateName, validateEmail, validateNumber } from "./validator.js"
-const form = document.getElementById('form-contacto');
-const campoNombre = document.getElementById('input-nombre');
-const campoNumero = document.getElementById('input-numero');
-const campoEmail = document.getElementById('input-email');
 
-const campoNotas = document.getElementById('input-notas');
-campoNombre.addEventListener('blur', (e) => {
-  const value = e.target.value;
+const btn = document.querySelector('#btn');
+const sidebar = document.querySelector('.sidebar');
+const searchBtn = document.querySelector('.btn_busqueda');
+const linkName = document.querySelector('.links-name');
+const btnUser = document.querySelector('.profile_content');
+const subMenu = document.querySelector('.sub-menu')
 
-  validateName(value, campoNombre);
-});
+btn.onclick = () => {
+    sidebar.classList.toggle('active');
+}
 
-campoNumero.addEventListener('blur', (e) => {
-  const value = e.target.value;
+searchBtn.onclick = () => {
+    sidebar.classList.toggle('active');
+}
 
-  validateNumber(value, campoNumero);
-});
+btnUser.onclick = () => {
+    subMenu.classList.toggle('active')
+}
 
-campoEmail.addEventListener('blur', (e) => {
-  const value = e.target.value;
 
-  validateEmail(value, campoEmail);
-});
+const forms = document.querySelectorAll('.form-contacto1');
 
-// -----------------------------------------
-// 5. Event listener del form
-// -----------------------------------------
+forms.forEach(form => {
+  const campoNombre = form.querySelector('.input-nombre1');
+  const campoNumero = form.querySelector('.input-numero1');
+  const campoEmail = form.querySelector('.input-email1');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+  campoNombre.addEventListener('blur', (e) => {
+    const value = e.target.value;
+    validateName(value, campoNombre);
+  });
 
-  // Extraemos los valores
-  const nombre = campoNombre.value;
-  const numero = campoNumero.value;
-  const email = campoEmail.value;
-  const notas = campoNotas.value;
+  campoNumero.addEventListener('blur', (e) => {
+    const value = e.target.value;
+    validateNumber(value, campoNumero);
+  });
 
-  // Repetimos validacion por si no se produjo el blur
-  if (
-    validateName(nombre, campoNombre) &&
-    validateNumber(numero, campoNumero) &&
-    validateEmail(email, campoEmail) 
-  ) {
+  campoEmail.addEventListener('blur', (e) => {
+    const value = e.target.value;
+    validateEmail(value, campoEmail);
+  });
 
-    // Vaciar campos
-    form.reset();
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    // Resetear clases
-    campoNombre.classList.remove('is-valid', 'is-invalid');
-    campoNumero.classList.remove('is-valid', 'is-invalid');
-    campoEmail.classList.remove('is-valid', 'is-invalid');
-  }
+    // Extraemos los valores dentro del formulario actual
+    const nombre = campoNombre.value;
+    const numero = campoNumero.value;
+    const email = campoEmail.value;
+
+    // Repetimos validación por si no se produjo el blur
+    if (
+      validateName(nombre, campoNombre) &&
+      validateNumber(numero, campoNumero) &&
+      validateEmail(email, campoEmail)
+    ) {
+      // Vaciar campos del formulario actual
+      form.reset();
+      // Resetear clases del formulario actual
+      campoNombre.classList.remove('is-valid', 'is-invalid');
+      campoNumero.classList.remove('is-valid', 'is-invalid');
+      campoEmail.classList.remove('is-valid', 'is-invalid');
+      Swal.fire({
+        title: '¿Quieres enviar los comentarios?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Enviar',
+        denyButtonText: `Prefiero no hacerlo`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('¡Gracias por tu comentario! En breve nos ponemos en contacto con vos.', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('No hay problema si deseas contactarnos, recorda que siempre estamos dispuestos a ayudarte', '', 'info')
+        }
+      })
+    }
+  });
 });

@@ -9,7 +9,7 @@ export const validateName = (value, campo) => {
   }
 
   // Maxima long del nombre
-  if (value.trim().length >= 100) {
+  if (value.trim().length >= 25) {
     campo.classList.add("is-invalid");
     campo.classList.remove("is-valid");
     return false;
@@ -50,7 +50,7 @@ export const validateEmail = (value, campo) => {
   }
 
   // Cantidad de digitos mayor a 100
-  if (value.trim().length > 100) {
+  if (value.trim().length > 50) {
     campo.classList.add("is-invalid");
     campo.classList.remove("is-valid");
     return false;
