@@ -13,7 +13,7 @@
     />
     <title>Nosotros - Disney+</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../style/acercaDe.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script
       src="https://kit.fontawesome.com/8d13b22e35.js"
@@ -23,12 +23,110 @@
   <body>
     <header class="bg-dark">
         <nav>
-            <p>a</p>
+            <nav class="sidebar">
+                <div class="logo_content">
+                    <div class="logo">
+                        <img src="/img/logo/20220128173228!Disney+_logo.svg" alt="Logo de disney+">
+                    </div>
+                    <i class="fa-solid fa-bars" id="btn"></i>
+                </div>
+               
+                <ul class="nav-list">
+                    <li>
+                        <div class="profile_content">
+                            <div class="profile">
+                                <div class="profile_details">
+                                    <i class="fa-solid fa-circle-user" id="user_img"></i>
+                                    <div class="profile_name">
+                                        Usuario
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i>
+                                    <span>Agregar perfil</span>
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Editar perfiles
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Ajustes de aplicacion
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Editar perfiles
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Ajustes de aplicacion
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Cuenta
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Cancelar suscripcion
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Ayuda
+                                </a>
+                            </li>
+                            <li class="more-options">
+                                <a href="#">
+                                    Cerrar sesion
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass btn_busqueda"></i>
+                        <input type="text" placeholder="Busqueda">
+                    </li>
+                    <li>
+                        <a href="/index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="links-name">Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/contacto.html">
+                            <i class="fa-solid fa-plus"></i>
+                            <span class="links-name">Contacto</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="links-name">Acerca De</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-film"></i>
+                            <span class="links-name">Suscripcion</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </nav>
     </header>
     <main class="container">
         <div class="row">
-        <section class="card col-12 col-md-8 ms-4 rounded-3 p-5 shadow">
+        <section class="card col-12 col-md-8 ms-4 rounded-3 p-5 shadow mt-5">
         <h1 class="text-secondary-emphasis">Primeros pasos en Disney+</h1>
         <p>Si quieres suscribirte a Disney+, estás en el lugar indicado. Para más información sobre Disney+, selecciona una opción de la siguiente lista: </p>
         <div>
@@ -45,7 +143,7 @@
             </ul>
         </div>
         <div>
-            <h3 class="text-secondary-emphasis">¿Qué es Disney+?</h3>
+            <h3 class="text-secondary-emphasis mt-4">¿Qué es Disney+?</h3>
             <p>Disney+ es la plataforma de streaming que ofrece entretenimiento de <strong class="strong_color">Disney, Pixar, Marvel, Star Wars y National Geographic.</strong> Desde originales exclusivos hasta tus clásicos favoritos, Disney+ te permite disfrutar con la mejor calidad.</p>
             <h5>¿Cuánto cuesta Disney?</h5>
             <section>
@@ -83,7 +181,7 @@
             </div>
         </div>
     </section>
-    <section class="card col-12 col-md-3 p-4 ms-4 rounded-3 shadow ejemplo">
+    <section class="card col-12 col-md-3 p-4 ms-4 rounded-3 shadow ejemplo mt-5">
         <h4 class="card-title">Artículos sugeridos </h4>
         <hr>
         <ul class="lista-articulos">
@@ -102,7 +200,7 @@
         <div class="row">
             <div class="col-md-4 d-flex justify-content-around mt-4">
                 <div class="card card-nosotros">
-                    <img src="../img/fotoFacundo-fotor.png" class="card-img-top " alt="Facundo Vecino">
+                    <img src="../img/acercaDe/fotoFacundo-fotor.png" class="card-img-top " alt="Facundo Vecino">
                     <div class="card-body text-center">
                       <h5 class="card-title">Facundo Vecino</h5>
                       <p class="card-text"> Financiero, se ocupó de la estrategia económica del proyecto</p>            
@@ -111,7 +209,7 @@
             </div>
             <div class="col-md-4 d-flex justify-content-around mt-4">
                 <div class="card card-nosotros">
-                    <img src="../img/fotoEnzo-fotor.png" class="card-img-top " alt="Enzo Iñigo">
+                    <img src="../img/acercaDe/fotoEnzo-fotor.png" class="card-img-top " alt="Enzo Iñigo">
                     <div class="card-body text-center">
                       <h5 class="card-title">Enzo Iñigo</h5>
                       <p class="card-text">Programador, creó de la plataforma tecnológica</p>            
@@ -119,7 +217,7 @@
                 </div>        
             </div><div class="col-md-4 d-flex justify-content-around mt-4">
                 <div class="card card-nosotros">
-                    <img src="../img/fotoBelen-fotor.png" class="card-img-top " alt="Belén Segovia">
+                    <img src="../img/acercaDe/fotoBelen-fotor.png" class="card-img-top " alt="Belén Segovia">
                     <div class="card-body text-center">
                       <h5 class="card-title">Belén Segovia</h5>
                       <p class="card-text"> Artista, diseñó el logotipo y la interfaz de usuario.</p>            
@@ -128,7 +226,7 @@
             </div>
             <div class="col-md-6 d-flex justify-content-evenly mt-4">
                 <div class="card card-nosotros">
-                    <img src="../img/fotoLourdes-fotor.png" class="card-img-top " alt="Lourdes Fuensalida">
+                    <img src="../img/acercaDe/fotoLourdes-fotor.png" class="card-img-top " alt="Lourdes Fuensalida">
                     <div class="card-body text-center">
                       <h5 class="card-title">Lourdes Fuensalida</h5>
                       <p class="card-text"> Marketing, desarrolló la estrategia de lanzamiento de Disney+</p>            
@@ -136,7 +234,7 @@
                 </div>        
             </div><div class="col-md-6 d-flex justify-content-evenly mt-4">
                 <div class="card card-nosotros">
-                    <img src="../img/fotoTomas-fotor.png" class="card-img-top " alt="Tomás Antune">
+                    <img src="../img/acercaDe/fotoTomas-fotor.png" class="card-img-top " alt="Tomás Antune">
                     <div class="card-body text-center">
                       <h5 class="card-title">Tomás Antune</h5>
                       <p class="card-text">Escritor, creador de contenido exclusivo para Disney+</p>            
@@ -148,8 +246,56 @@
     </section>
     </div>
     </main>
-    <footer class="bg-dark">
-        <p>a</p>
+    <footer>
+        <section class="d-flex text-center" id="secContainer">
+            <article class="boxInfo">
+              <ol>
+                <li>
+                  <a class="fw-medium" href="/pages/error404.html">Politica de privacidad</a>
+                </li>
+                <li>
+                  <a class="fw-medium" href="/pages/error404.html">Cancelar suscripcion</a>
+                </li>
+              </ol>
+            </article>
+            <article class="boxInfo">
+              <ol>
+                <li>
+                  <a class="fw-medium" href="/pages/error404.html">Acuerdo de suscripcion</a>
+                </li>
+                <li>
+                  <a class="fw-medium" href="/pages/acercaDe.html">Acerca de Disney+</a>
+                </li>
+              </ol>
+            </article>
+            <article class="boxInfo">
+              <ol>
+                <li>
+                  <a class="fw-medium" href="/pages/error404.html">Dispositivos compatibles</a>
+                </li>
+                <li>
+                  <a class="fw-medium" href="/pages/contacto.html">Ayuda</a>
+                </li>
+              </ol>
+            </article>
+            <article id="socialLinks">
+              <p class="ms-3">© Disney. Todos los derechos reservados</p>
+              <a href=""
+                ><img
+                  id=""
+                  src="/img/logo/20220128173228!Disney+_logo.svg"
+                  alt="Logo Disney+"
+              /></a>
+              <ol class="text-center">
+                <ul>
+                  <a href="" target="_blank">Facebook</a>
+                  <a href="" target="_blank">Instagram</a>
+                  <a href="" target="_blank">Youtube</a>
+                </ul>
+              </ol>
+            </article>
+          </section>
     </footer>
+    <script type="module" src="../javascript/app.js"></script>
   </body>
 </html>
