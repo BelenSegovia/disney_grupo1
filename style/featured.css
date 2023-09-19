@@ -1,0 +1,35 @@
+a {
+    text-decoration: none;    
+}
+
+.imagen-con-borde{
+    width: 100%;
+    height: auto;
+}
+
+.boton-azul{
+    padding: 0 16px;
+    background-color: #231f4d;
+    border: 1px solid #292e74;
+    color: #ffffff;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  
+    &:hover {
+      background-color: #151042;
+      color: #ffffff;
+    }
+  }
+
+  .boton-blanco{
+    padding: 0 16px;
+    background-color: #ffffff;
+    border: 1px solid #231f4d;
+    color: #170e49;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  
+    &:hover {
+      background-color: #151042;
+      color: #ffffff;
+    }
+  }
