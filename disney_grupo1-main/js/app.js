@@ -1,6 +1,5 @@
 'use strict'
 import { validateName, validateEmail, validateNumber } from "./validator.js"
-
 const btn = document.querySelector('#btn');
 const sidebar = document.querySelector('.sidebar');
 const searchBtn = document.querySelector('.btn_busqueda');
@@ -66,13 +65,12 @@ forms.forEach(form => {
       Swal.fire({
         title: '¿Quieres enviar los comentarios?',
         showDenyButton: true,
-        showCancelButton: true,
         confirmButtonText: 'Enviar',
         denyButtonText: `Prefiero no hacerlo`,
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-          Swal.fire('¡Gracias por tu comentario! En breve nos ponemos en contacto con vos.', '', 'success')
+          Swal.fire('¡Gracias por tu comentario! En breve nos pondremos en contacto con vos.', '', 'success')
         } else if (result.isDenied) {
           Swal.fire('No hay problema si deseas contactarnos, recorda que siempre estamos dispuestos a ayudarte', '', 'info')
         }
