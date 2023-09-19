@@ -4,19 +4,6 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
-    background-color: rgb(3, 7, 19);
-    background: linear-gradient(
-      0deg,
-      rgba(3, 7, 19, 1) 10%,
-      rgba (2, 7, 27, 1) 43%,
-      rgba(2, 8, 42, 1) 86%
-    );
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-}
 
 main {
     position: relative;
