@@ -1,28 +1,37 @@
-.enlaces_acercaDe{
-    text-decoration: none;
+body {
+  background-color: rgb(3, 7, 19);
+  background: linear-gradient(
+    0deg,
+    rgba(3, 7, 19, 1) 10%,
+    rgba (2, 7, 27, 1) 43%,
+    rgba(2, 8, 42, 1) 86%
+  );
+}
+.enlaces_acercaDe {
+  text-decoration: none;
 }
 
 .strong_color {
-    color: #051352;
+  color: #051352;
 }
 
-.lista-articulos{
-   list-style: none;
+.lista-articulos {
+  list-style: none;
 }
 
-.boton-blanco{
-    padding: 0 16px;
-    background-color: #ffffff;
-    border: 1px solid #231f4d;
-    color: #000000;
-    transition: background-color 0.15s ease, color 0.15s ease;
-  
-    &:hover {
-      background-color: #151042;
-      color: #ffffff;
-    }
-  }
+.boton-blanco {
+  padding: 0 16px;
+  background-color: #ffffff;
+  border: 1px solid #231f4d;
+  color: #000000;
+  transition: background-color 0.15s ease, color 0.15s ease;
 
-  .card-nosotros{
-    width: 13rem;
+  &:hover {
+    background-color: #151042;
+    color: #ffffff;
   }
+}
+
+.card-nosotros {
+  width: 13rem;
+}
