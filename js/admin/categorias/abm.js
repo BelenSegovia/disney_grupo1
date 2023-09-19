@@ -31,7 +31,7 @@ export const eliminarCategoria = (categoria) => {
 
            swal.fire({
             title: "Exito",
-            text: "El contacto se eliminó exitosamente",
+            text: "La categoria se eliminó exitosamente",
             icon: "success"
             });
 

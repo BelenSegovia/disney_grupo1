@@ -1,3 +1,4 @@
+import { eliminarMetraje } from "./abm.js";
 
 
 export const obtenerMetrajeDeLS = () => {
@@ -72,7 +73,7 @@ export const crearFilaTabla = (metraje, indice) => {
     }
 
     btnEliminar.onclick = () => {
-        console.log(`Eliminar ${metraje.id}`)
+        eliminarMetraje(metraje.id)
     }
     
     tdBotones.appendChild(btnEditar);
