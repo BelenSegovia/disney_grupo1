@@ -284,13 +284,24 @@ main {
   .slick-slide[aria-hidden="true"] .card:before {
     content: "";
     background: linear-gradient(#1b1d24, #1e1f2a) 0 0 / cover;
-    width: 100%;
-    display: block;
-    position: absolute;
+    
     opacity: 0.5;
     border-radius: 4px;
     z-index: 2;
   }
+/* Destacadas */
+.slide {
+    border: 2px solid transparent; 
+    transition: border-color 0.3s ease, border-radius 0.3s ease; 
+    cursor: pointer;
+}
+
+.slide:hover {
+    border-color: rgb(255, 255, 255); 
+    border-radius: 10px;
+}
+
+
 
 /* Disney Cards */
 
