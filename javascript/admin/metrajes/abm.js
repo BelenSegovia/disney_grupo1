@@ -13,6 +13,45 @@ export const añadirMetraje = (nombre, descripcion, tipo, categoria, imagen) => 
     })
 };
 
+export const editarMetraje = (nombre, descripcion, tipo, categoria, imagen) => {
+    const id = sessionStorage.getItem("idMetraje");
+    const metrajes = obtenerMetrajeDeLS();
+
+    if(!id){
+        swal.fire({
+            title: "Error",
+            text: "No se encontró el usuario",
+            icon: "error"
+        })
+        return;
+    }
+
+    const posicionMetraje = metrajes.findIndex((item) => item.id === id)
+
+    if(posicionMetraje === -1){
+        swal.fire({
+            title: "Error",
+            text: "No se encontró el usuario",
+            icon: "error"
+        })
+        return;
+    }
+
+    const metrajeEditado = new Metraje(nombre, descripcion, tipo, categoria, imagen);
+
+    metrajes.splice(posicionMetraje, 1, metrajeEditado);
+
+    localStorage.setItem('metrajes', JSON.stringify(metrajes));
+
+    swal.fire({
+        title: 'Exito',
+        text: 'El metraje se modificó correctamente',
+        icon: 'success'
+    })
+
+    sessionStorage.removeItem('idMetraje')
+}
+
 export const eliminarMetraje = (id) => {
     swal.fire({
         title: "¿Estas seguro?",

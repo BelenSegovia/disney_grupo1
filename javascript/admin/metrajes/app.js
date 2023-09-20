@@ -1,8 +1,7 @@
-
 import { validateCategoria, validateDescripcion, validateImagen, validateNombre, validateTipo } from "../validators.js";
-import { añadirMetraje } from "./abm.js";
+import { añadirMetraje, editarMetraje } from "./abm.js";
 import { obtenerCategoriasDeLS } from "../categorias/abmUtils.js"
-import { cargarSelectCategorias, cargarTabla } from "./abmUtils.js";
+import { cargarSelectCategorias, cargarTabla, estaEditando } from "./abmUtils.js";
 
 
 window.addEventListener('load', cargarTabla);
@@ -17,7 +16,7 @@ const campoNombre = document.getElementById('input-nombre');
 const campoTipo = document.getElementById('input-tipo');
 const campoImagen = document.getElementById('input-imagen');
 const campoDescripcion = document.getElementById('input-descripcion');
-const campoCategoria = document.getElementById('select-categorias')
+const campoCategoria = document.getElementById('select-categorias');
 const form = document.getElementById('form');
 
 campoNombre.addEventListener('blur', (e) => {
@@ -45,25 +44,34 @@ campoCategoria.addEventListener('blur', (e) => {
     validateCategoria(value, campoCategoria)
 })
 
-
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     let nombre = campoNombre.value;
-    let tipo = campoTipo.value;
+    let tipo
+    if(campoTipo.value === '1'){
+        tipo = "Pelicula"
+    } else {
+        tipo = "Serie"
+    }
     let imagen = campoImagen.value;
     let descripcion = campoDescripcion.value;
-    let categoria = campoCategoria.value
+    let categoria = categorias[campoCategoria.value]
 
     if(
         validateNombre(nombre, campoNombre) && 
-        validateTipo(tipo, campoTipo) && 
+        validateTipo(campoTipo.value, campoTipo) && 
         validateImagen(imagen, campoImagen) && 
         validateDescripcion(descripcion, campoDescripcion) &&
-        validateCategoria(categoria, campoCategoria)){
+        validateCategoria(campoCategoria.value, campoCategoria)){
             //Crear categoria
-        añadirMetraje(nombre, descripcion, tipo, categoria, imagen);
 
+            if(estaEditando()){
+                editarMetraje(nombre, descripcion, tipo, categoria, imagen);
+            } else {
+                añadirMetraje(nombre, descripcion, tipo, categoria, imagen);
+            }
+        
         //Recargar tabla
         cargarTabla();
 
@@ -76,6 +84,5 @@ form.addEventListener('submit', (e) => {
         campoImagen.classList.remove('is-valid', 'is-invalid')
         campoDescripcion.classList.remove('is-valid', 'is-invalid')
         campoTipo.classList.remove('is-valid', 'is-invalid')
-
         }
 })

@@ -41,71 +41,75 @@
             </div>
           </nav>
     </header>
-    <main class="container my-4">
-        <h1>Cargar Pelicula</h1>
-        <hr>
-        <section class="bg-secondary p-3 rounded text-light">
-            <form id="form">
-                <fieldset class="mb-3">
-                    <label for="input-nombre" class="form-label">Nombre</label>
-                    <input 
-                        placeholder="Nombre de Pelicula/Serie" 
-                        type="text" 
-                        class="form-control" 
-                        id="input-nombre">
+    <main>
+        <div class="container my-4 text-center">
+            <h1>Cargar Pelicula</h1>
+        </div>
+        <section class="container mb-5">
+            <article class="row">
+                <form id="form">
+                    <fieldset class="mb-3">
+                        <label for="input-nombre" class="form-label">Nombre</label>
+                        <input 
+                            placeholder="Nombre de Pelicula/Serie" 
+                            type="text" 
+                            class="form-control" 
+                            id="input-nombre">
+                            <div class="invalid-feedback">
+                                Ingrese un nombre valido
+                            </div>
+                    </fieldset>
+                    <fieldset class="mb-3">
+                        <label for="select-pelicula-serie" class="form-label">Tipo de Metraje</label>
+                        <select class="form-select" id="input-tipo" aria-label="Default select example">
+                            <option value="0">Menu de opciones</option>
+                            <option value="1">Pelicula</option>
+                            <option value="2">Serie</option>
+                        </select>
                         <div class="invalid-feedback">
-                            Ingrese un nombre valido
+                            Seleccione un tipo valido
                         </div>
-                </fieldset>
-                <fieldset class="mb-3">
-                    <label for="select-pelicula-serie" class="form-label">Tipo de Metraje</label>
-                    <select class="form-select" id="input-tipo" aria-label="Default select example">
-                        <option value="0">Menu de opciones</option>
-                        <option value="1">Pelicula</option>
-                        <option value="2">Serie</option>
-                      </select>
-                    <div class="invalid-feedback">
-                        Seleccione un tipo valido
-                    </div>
-                </fieldset>
-                <fieldset class="mb-3">
-                    <label for="input-imagen" class="form-label">Imagen</label>
-                    <input 
-                        placeholder="https://google.com" 
-                        type="text" 
-                        class="form-control" 
-                        id="input-imagen">
+                    </fieldset>
+                    <fieldset class="mb-3">
+                        <label for="input-imagen" class="form-label">Imagen</label>
+                        <input 
+                            placeholder="https://google.com" 
+                            type="text" 
+                            class="form-control" 
+                            id="input-imagen">
+                            <div class="invalid-feedback">
+                                Ingrese un enlace valido
+                            </div>
+                    </fieldset>
+                    <fieldset class="mb-3 form-check form-switch">
+                        <label for="input-publicada" class="form-check-label">Esta publicada?</label>
+                        <input 
+                            class="form-check-input" 
+                            type="checkbox" 
+                            role="switch" 
+                            id="input-publicada">
+                    </fieldset>
+                    <fieldset>
+                        <label for="select-categorias" class="form-label"
+                        >Seleccione la categoria</label
+                        >
+                        <select id="select-categorias" class="form-select">
+                            <option value="#">Seleccione una categoria</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="mb-3">
+                        <label for="input-descripcion" class="form-label">Descripcion</label>
+                        <textarea class="form-control" id="input-descripcion"></textarea>
                         <div class="invalid-feedback">
-                            Ingrese un enlace valido
+                            Escriba una Descripcion
                         </div>
-                </fieldset>
-                <fieldset class="mb-3 form-check form-switch">
-                    <label for="input-publicada" class="form-check-label">Esta publicada?</label>
-                    <input 
-                        class="form-check-input" 
-                        type="checkbox" 
-                        role="switch" 
-                        id="input-publicada">
-                </fieldset>
-                <fieldset>
-                    <label for="select-categorias" class="form-label"
-                      >Seleccione la categoria</label
-                    >
-                    <select id="select-categorias" class="form-select">
-                        <option value="#">Seleccione una categoria</option>
-                    </select>
-                  </fieldset>
-                <fieldset class="mb-3">
-                    <label for="input-descripcion" class="form-label">Descripcion</label>
-                    <textarea class="form-control" id="input-descripcion"></textarea>
-                    <div class="invalid-feedback">
-                        Escriba una Descripcion
+                    </fieldset>
+                    <div class="text-end mt-3">
+                    <button type="submit" id="btnAdd" class="btn btn-danger">Guardar</button>
+                    <button type="submit" id="btnUpdate" class="btn btn-warning d-none">Actualizar Datos</button>
                     </div>
-                </fieldset>
-                <div class="text-end mt-3">
-                <button type="submit" class="btn btn-danger">Guardar</button>
-                </div>
-            </form>
+                </form>
+            </article>
         </section>
         <section class="table-responsive mt-3">
             <table class="table">
