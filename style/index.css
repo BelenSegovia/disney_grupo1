@@ -1,0 +1,181 @@
+
+.container-general {
+    margin-top: 30px;
+}
+
+.cl img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0) 0px 16px 10px -10px;
+  }
+  .cl {
+    padding: 5px;
+    position: relative;
+  }
+  @media (min-width: 768px) {
+    .cl {
+      padding: 10px;
+    }
+  }
+  /* Dots Slider */
+  .slick-dots li button:before {
+    color: #969eab;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    content: "•";
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #f9f9f9;
+  }
+  .slick-dots {
+    display: block;
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    margin: 0;
+    padding: 20px;
+    right: 8px;
+    width: 100%;
+  }
+  
+  .slick-slide[aria-hidden="true"] .card:before {
+    content: "";
+    background: linear-gradient(#1b1d24, #1e1f2a) 0 0 / cover;
+    
+    opacity: 0.5;
+    border-radius: 4px;
+    z-index: 2;
+  }
+/* Destacadas */
+.slide {
+    border: 2px solid transparent; 
+    transition: border-color 0.3s ease, border-radius 0.3s ease; 
+    cursor: pointer;
+}
+
+.slide:hover {
+    border-color: rgb(255, 255, 255); 
+    border-radius: 10px;
+}
+
+
+
+/* Disney Cards */
+
+.container-disney-cards {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (min-width: 1300px) {
+    .disney-rows {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
+
+.disney-rows {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-row-gap: 15px;
+    padding-bottom: 10px;
+}
+
+.card-disney {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #3a3c4a, #242632);
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+}
+
+.item-border {
+    position: relative;
+    border-radius: 10px;
+    transition: 250ms;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.item-image.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition-duration: 300ms;
+    visibility: hidden;
+}
+
+.card-disney:hover .item-border{
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    transform: scale(1.05);
+    border: 4px solid rgb(249, 249, 249);
+}
+
+.card-disney:hover .item-image.hover-image{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+}
+
+.grid-alto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px; 
+    padding: 20px; 
+}
+
+.card-alto img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #3a3c4a, #242632);
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+}
+
+.card-alto:hover img {
+    border: 4px solid rgb(249, 249, 249); 
+    transform: scale(1.05); 
+}
+
+@media screen and (min-width:300px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+    }
+
+    .item-border {
+        border: 2px solid rgb(249, 249, 249, 0.1);
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    .item-border {
+        border: 4px solid rgb(249, 249, 249, 0.1);
+    }
+}

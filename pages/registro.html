@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page CSS Grid</title>
+    <link rel="stylesheet" href="/style/registro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top d-flex p-3">
+            <img src="/img/logo/20220128173228!Disney+_logo.svg" alt="DisneyPlus">
+            <a href="#" class="hero__cta">Join us!</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article class="d-flex text-center justify-content-around mt-5 section-inicio">
+                <article class="oferta-suscripcion mt-5">
+                    <h1>OFERTA POR TIEMPO LIMITADO</h1>
+                    <p class="descuento">¡75 % de descuento en Disney+!</p>
+                    <p>ARS 199/mes (final) por tres meses*</p>
+                    <p>Luego, ARS 799/mes (final)</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        SUSCRIBIRSE Y AHORRAR
+                    </button>
+                </article>
+                <div class="d-flex fondo-imagen">
+                    <img src="/img/registro/original (1).png" alt="">
+                </div>
+            </article>
+            <article>  
+                <div class="d-flex justify-content-center">
+                    <div  id="planDeSuscripcion">
+                        <img  src="../img/registro/planDeSuscripcion.png" alt="Plan de suscripcion">
+                    </div>
+                </div>
+            </article>
+        </section> 
+        <section class="modal">
+            <div class="modal__container">
+                <img src="/img/registro/modal.svg" class="modal__img">
+                <h2 class="modal__title">¡Bienvenido al sitio!</h2>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam quas, culpa tempora. Veniam consectetur deleniti maxime.</p>
+                <a href="#" class="modal__close">Cerrar Modal</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <footer class="sidebar-footer">
+            <section class="d-flex text-center" id="secContainer">
+                <article class="boxInfo">
+                    <ol>
+                        <li>
+                            <a class="fw-medium" href="/pages/error404.html">Politica de privacidad</a>
+                        </li>
+                        <li>
+                            <a class="fw-medium" href="/pages/registro.html">Cancelar suscripcion</a>
+                        </li>
+                    </ol>
+                </article>
+                <article class="boxInfo">
+                    <ol>
+                        <li>
+                            <a class="fw-medium" href="/pages/error404.html">Acuerdo de suscripcion</a>
+                        </li>
+                        <li>
+                            <a class="fw-medium" href="/pages/acercaDe.html">Acerca de Disney+</a>
+                        </li>
+                    </ol>
+                </article>
+                <article class="boxInfo">
+                    <ol>
+                        <li>
+                            <a class="fw-medium" href="/pages/error404.html">Dispositivos compatibles</a>
+                        </li>
+                        <li>
+                            <a class="fw-medium" href="/pages/contacto.html">Ayuda</a>
+                        </li>
+                        
+                    </ol>
+                </article>
+                <article id="socialLinks">
+                    <p class="ms-3">© Disney. Todos los derechos reservados</p>
+                    <a href="/index.html"><img src="/img/logo/20220128173228!Disney+_logo.svg"
+                            alt="Logo Disney+"></a>
+                    <ol class="text-center">
+                        <ul>
+                            <a href="/pages/error404.html" target="_blank">Facebook</a>
+                            <a href="/pages/error404.html" target="_blank">Instagram</a>
+                            <a href="/pages/error404.html" target="_blank">Youtube</a>
+                        </ul>
+                    </ol>
+                </article>
+            </section>
+    </footer>
+    <script src="/javascript/registro/app.js"></script>
+</body>
+</html>
