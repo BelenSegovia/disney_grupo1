@@ -22,6 +22,7 @@
             crossorigin="anonymous">
         </script>
         <script defer type="module" src="../javascript/admin/categorias/app.js"></script>
+        <script defer type="module" src="../javascript/logueo/logout.js"></script>
     </head>
     <body>
         <header>
@@ -36,6 +37,9 @@
                       <a class="nav-link" href="/index.html">Inicio</a>
                       <a class="nav-link" href="/pages/admin.html">Admin</a>
                       <a class="nav-link active" aria-current="page" href="#">Categorias</a>
+                      <button class="nav-link text-danger d-flex text-end" id="boton-salir">
+                        Salir
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -43,7 +47,7 @@
         </header>
         <main class="py-4 bg-dark">
             <h1 class="container my-5 text-light">Cargar Categorias</h1>
-            <section class="bg-secondary p-5 rounded text-light">
+            <section class="bg-secondary p-5 rounded text-light container-fluid">
                 <form id="form-categoria">
                     <fieldset class="mb-2">
                         <label for="input-categoria">Ingrese una Categoria</label>
@@ -57,7 +61,7 @@
                     </div>
     </form>
             </section>
-            <section class="table-responsive">
+            <section class="table-responsive container my-3">
                 <table class="table">
                     <thead>
                         <tr>

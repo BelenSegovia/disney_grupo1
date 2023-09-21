@@ -1,23 +1,18 @@
 'use strict'
 
-// -----------------------------------------
-// 1- Seleccionar el botón
-// -----------------------------------------
+// Seleccionar el botón
 
 const botonSalir = document.getElementById('boton-salir');
 
-// -----------------------------------------
-// 2- Mostrar u ocultar el botón
-// -----------------------------------------
+// Mostrar u ocultar el botón
 
 const estaLogueado = JSON.parse(sessionStorage.getItem('estaLogueado'));
 if (estaLogueado) {
   botonSalir.classList.remove('d-none');
 };
 
-// -----------------------------------------
-// 3- Acción de boton
-// -----------------------------------------
+// Acción de boton
+
 
 botonSalir.addEventListener('click', (e)=> {
     swal.fire({
@@ -35,8 +30,6 @@ botonSalir.addEventListener('click', (e)=> {
 
             // 2- Redireccionar a home (ruta NO protegida)
             window.location.href= '/';
-        
-            // Listo :)
         }
     });
 })
