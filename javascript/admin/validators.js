@@ -1,3 +1,5 @@
+import { obtenerCategoriasDeLS } from "./categorias/abmUtils.js";
+
 export const validateNombre = (value, campo) => {
     //Minimo nombre
     if(value.trim().length <= 2) {
@@ -80,14 +82,20 @@ export const validateTipo = (value, campo) => {
 }
 
 export const validateCategoria = (value, campo) => {
-    //Si es una categoria existente
-    if(value.trim() === "") {
+    // Si el campo está vacío o es solo un signo #, marca como inválido
+    if (value.trim() === "" || value.trim() === "#") {
         campo.classList.remove('is-valid');
         campo.classList.add('is-invalid');
         return false;
-    } 
+    }
 
-    if(value.trim() === "#"){
+    // Obtén las categorías existentes
+    const categorias = obtenerCategoriasDeLS();
+
+    // Verifica si la categoría ya existe (comparando en mayúsculas y minúsculas)
+    const categoriaExistente = categorias.find(c => c.toLowerCase() === value.toLowerCase());
+
+    if (categoriaExistente) {
         campo.classList.remove('is-valid');
         campo.classList.add('is-invalid');
         return false;

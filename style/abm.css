@@ -9,3 +9,164 @@ body {
     object-fit: cover;
 }
 
+#secContainer {
+    background: #101528;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s ease;
+    justify-content: space-around;
+}
+
+
+.boxInfo {
+    margin: 3rem;
+    gap: 1rem;
+}
+
+.boxInfo h2 {
+    color: #f3f4f4;
+    font-size: 18px;
+    line-height: 1.5px;
+    padding-bottom: 16px;
+    align-items: center;
+}
+
+.boxInfo a {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
+    color: unset;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.5s;
+    font-weight: 400;
+
+    &:hover {
+        border-bottom: 1px solid rgb(253, 233, 204);
+        color: rgb(255, 235, 205);
+    }
+}
+
+.boxInfo ol {
+    list-style: none;
+}
+
+.boxInfo ol li a {
+    color: #8996A0;
+}
+
+
+#socialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#socialLinks p {
+    display: flex;
+    align-items: flex-end;
+    color: #8996A0;
+}
+
+#socialLinks img {
+    align-items: end;
+    width: 150px;
+}
+
+
+#socialLinks ol {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+#socialLinks ul a {
+    text-decoration: none;
+    color: #8996A0;
+    transition: 0.5s;
+    gap: 8px;
+    padding: 0 8px;
+
+
+    &:hover {
+        border-bottom: 1px solid blanchedalmond;
+        color: blanchedalmond;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+
+    #socialLinks {
+        display: block;
+    }
+
+    #socialLinks p {
+        display: block;
+        text-align: center;
+    }
+
+    #socialLinks img {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+    #socialLinks ol {
+        display: block;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+
+    #socialLinks ol ul {
+        padding: 0;
+    }
+}
+
+
+/* Tablet/Medium */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #socialLinks {
+        display: block;
+    }
+
+    #socialLinks p {
+        display: block;
+        text-align: center;
+    }
+
+    #socialLinks ol {
+        display: block;
+        text-align: center;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+
+    #socialLinks ol ul {
+        padding: 0;
+    }
+}
+
+
+@media screen and (min-width: 993px) {
+    #socialLinks ol ul {
+        padding: 0;
+    }
+
+    #socialLinks ol {
+        padding: 0;
+    }
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ol, ul {
+    padding-left: 0;
+}

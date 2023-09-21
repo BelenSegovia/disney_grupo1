@@ -1,12 +1,24 @@
 import { obtenerMetrajeDeLS } from "../admin/metrajes/abmUtils.js";
 
-export const crearGrid = (metraje) => {
+export const cargarTabla = () => {
+    const metrajes = obtenerMetrajeDeLS();
+
+    // Vaciar tabla
+    const gridBody = document.querySelector('.grid-tendencias');
+    gridBody.innerHTML = '';
+
+    // Crear tarjetas y modales para cada metraje
+    metrajes.forEach((metraje) => {
+        crearTarjetaYModal(metraje);
+    });
+};
+
+export const crearTarjetaYModal = (metraje) => {
     const gridBody = document.querySelector('.grid-tendencias');
     const divCard = document.createElement('div');
     divCard.classList.add("card-disney");
 
-    //Imagen
-
+    // Imagen en la tarjeta
     const cardImagen = document.createElement('div');
     const img = document.createElement('img');
     img.src = metraje.imagen;
@@ -16,22 +28,34 @@ export const crearGrid = (metraje) => {
     cardImagen.appendChild(img);
     divCard.appendChild(cardImagen);
 
-    
+    // Evento clic en la tarjeta
+    divCard.addEventListener('click', (e) => {
+        e.preventDefault();
+        mostrarModalDetalle(metraje);
+    });
 
     gridBody.appendChild(divCard);
-}
+};
 
-export const cargarTabla = () => {
-    const metrajes = obtenerMetrajeDeLS();
+export const mostrarModalDetalle = (metraje) => {
+    const modal = document.querySelector('.modal');
+    const titulo = modal.querySelector('.modal__title');
+    const descripcion = modal.querySelector('.modal__paragraph');
+    const imgModal = modal.querySelector('.modal__image img');
+    const btnCerrar = modal.querySelector('.modal__close');
 
-    //Vaciar tabla
+    titulo.innerText = metraje.nombre;
+    descripcion.innerText = metraje.descripcion;
+    imgModal.src = metraje.imagen;
+    imgModal.alt = metraje.nombre;
 
-    const gridBody = document.querySelector('.grid-tendencias');
-    gridBody.innerHTML = '';
+    // Mostrar modal
+    modal.classList.add('modal--show');
 
-    //Crear tabla
-
-    metrajes.forEach((metraje) => {
-        crearGrid(metraje)
+    // Evento clic en el botón de cierre del modal
+    btnCerrar.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Ocultar modal
+        modal.classList.remove('modal--show');
     });
-}
+};

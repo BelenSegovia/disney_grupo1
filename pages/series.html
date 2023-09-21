@@ -23,8 +23,8 @@
     <script defer type="module" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script defer type="module" src="/javascript/admin/metrajes/abm.js"></script>
     <script defer type="module" src="/javascript/admin/metrajes/abmUtils.js"></script>
-    <script defer type="module" src="/javascript/index/indexUtils.js"></script>
-    <script defer type="module" src="/javascript/index/app.js"></script>
+    <script defer type="module" src="/javascript/series/seriesUtils.js"></script>
+    <script defer type="module" src="/javascript/series/app.js"></script>
     <script defer type="module" src="/javascript/sidebar/app.js"></script>
     <script defer type="module" src="/javascript/slider.js"></script>
     <title>Disney+</title>
@@ -105,7 +105,7 @@
                     <input type="text" placeholder="Busqueda">
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/index.html">
                         <i class="fa-solid fa-house"></i>
                         <span class="links-name">Inicio</span>
                     </a>
@@ -143,22 +143,22 @@
                 <div class="slider center">
                     <div class="slide">
                         <div class="cl">
-                            <img src="img/slider/Carrusel Avatar (1).png" alt="Avatar">
+                            <img src="/img/slider/Carrusel Avatar (1).png" alt="Avatar">
                         </div>
                     </div>
                     <div class="slide">
                         <div class="cl">
-                                <img src="img/slider/Carrusel Guardianes (1).png" alt="Guardianes de la Galaxia">
+                                <img src="/img/slider/Carrusel Guardianes (1).png" alt="Guardianes de la Galaxia">
                         </div>
                     </div>
                     <div class="slide">
                         <div class="cl">
-                                <img src="img/slider/Carrusel Sirenita (1).png" alt="La Sirenita">
+                                <img src="/img/slider/Carrusel Sirenita (1).png" alt="La Sirenita">
                         </div>
                     </div>
                     <div class="slide">
                         <div class="cl">
-                                <img src="img/slider/Carrusel StarWars (1).png" alt="StarWars">
+                                <img src="/img/slider/Carrusel StarWars (1).png" alt="StarWars">
                         </div>
                     </div>
                 </div>
@@ -199,26 +199,51 @@
             </article>
         </section>
         <section class="container-fluid mt-3 mb-2">
-            <h4 class="text-light pt-3 ps-2 mt-2">Tendencias</h4>
+            <h4 class="text-light pt-3 ps-2 mt-2">Series</h4>
             <article class="grid grid-tendencias">
-                
+                <!-- <div class="card-disney">
+                    <a href="./pages/featured.html">
+                        <div class="item-border">
+                            <img class="item-image" src="./img/disney/elementos.jfif" alt="Elementos">
+                        </div>
+                    </a>
+                </div>
+                <div class="card-disney">
+                    <div class="item-border">
+                        <img class="item-image" src="./img/disney/sirenita.jfif" alt="La Sirenita">
+                    </div>
+                </div>
+                <div class="card-disney">
+                    <div class="item-border">
+                        <img class="item-image" src="./img/disney/ahsoka.jfif" alt="Ahsoka">
+                    </div>
+                </div>
+                <div class="card-disney">
+                    <div class="item-border">
+                        <img class="item-image" src="./img/disney/groot.jfif" alt="Yo soy Groot">
+                    </div>
+                </div>
+                <div class="card-disney">
+                    <div class="item-border">
+                        <img class="item-image" src="./img/disney/red.jfif" alt="Red">
+                    </div>
+                </div> -->
             </article>     
         </section>
-        
         <section class="container-fluid mt-3">
             <h4 class="text-light pt-3 ps-2 mt-2">Novedades de Disney+</h4>
             <article class="grid-alto">
                 <div class="item-borde card-alto">
-                    <img class="item-image" src="./img/disney/dugPerro.jfif" alt="La Vida de Dug">
+                    <img class="item-image" src="/img/disney/dugPerro.jfif" alt="La Vida de Dug">
                 </div>
                 <div class="card-alto">
-                    <img class="item-image" src="./img/disney/aguaPato.jfif" alt="Al agua, Pato">
+                    <img class="item-image" src="/img/disney/aguaPato.jfif" alt="Al agua, Pato">
                 </div>
                 <div class="card-alto">
-                    <img class="item-image" src="./img/disney/chipYdale.jfif" alt="Chip y Dale">
+                    <img class="item-image" src="/img/disney/chipYdale.jfif" alt="Chip y Dale">
                 </div>
                 <div class="card-alto">
-                    <img class="item-image" src="./img/disney/spidey.jfif" alt="Spidey, sorprendentes amigos">
+                    <img class="item-image" src="/img/disney/spidey.jfif" alt="Spidey, sorprendentes amigos">
                 </div>
             </article>
         </section>
@@ -227,47 +252,31 @@
             <article class="grid">
                     <div class="card-disney">
                             <div class="item-border">
-                                <img class="item-image" src="./img/disney/spiderman.jfif" alt="Spider-Man lejos de casa">
+                                <img class="item-image" src="/img/disney/spiderman.jfif" alt="Spider-Man lejos de casa">
                             </div>
                     </div>
                 <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/loki.jfif" alt="Loki">
+                        <img class="item-image" src="/img/disney/loki.jfif" alt="Loki">
                     </div>
                 </div>
                 <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/invasion.jfif" alt="Invasión Secreta">
+                        <img class="item-image" src="/img/disney/invasion.jfif" alt="Invasión Secreta">
                     </div>
                 </div>
                 <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/moonknight.jfif" alt="Moon Knight">
+                        <img class="item-image" src="/img/disney/moonknight.jfif" alt="Moon Knight">
                     </div>
                 </div>
                 <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/eternals.jfif" alt="Eternals">
+                        <img class="item-image" src="/img/disney/eternals.jfif" alt="Eternals">
                     </div>
                 </div>
             </article>     
         </section>
-        <section class="modal">
-            <div class="modal__container">
-                <div class="modal__image">
-                    <img src="" alt="">
-                </div>
-                <div class="modal__details">
-                    <h2 class="modal__title"></h2>
-                    <p class="modal__paragraph"></p>
-                    <div class="modal__actions">
-                        <i class="fa-regular fa-circle-play"></i>
-                        <i class="fa-regular fa-plus"></i>
-                    </div>
-                    <a href="#" class="modal__close">Cerrar</a>
-                </div>
-            </div>
-        </section>                  
     </main>
     <footer class="sidebar-footer">
         <section class="d-flex text-center" id="secContainer">
