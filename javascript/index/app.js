@@ -3,13 +3,6 @@ import { cargarTabla } from "./indexUtils.js";
 
     window.addEventListener('load', cargarTabla);
 
-
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    console.log('Hola en la consola');
-  });
-});
-
 // BUSCADOR 
 
 document.addEventListener('DOMContentLoaded', () => {
