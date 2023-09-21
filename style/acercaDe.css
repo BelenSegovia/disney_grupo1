@@ -10,13 +10,14 @@ body {
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  background: radial-gradient(#2C2F42, #161824);
 }
 
 main {
   position: relative;
+  left: 78px;
+  margin-right: 80px;
 }
-
-/* Sidebar */
 
 .sidebar {
   position: fixed;
@@ -68,6 +69,8 @@ main {
   left: 90%;
 }
 
+
+
 .sidebar ul li {
   position: relative;
   height: 50px;
@@ -86,6 +89,7 @@ main {
   text-decoration: none;
   transition: all 0.4s ease;
   border-radius: 12px;
+  
 }
 
 .sidebar ul li a:hover {
@@ -225,8 +229,6 @@ main {
   padding: 0 15px;
 }
 
-/* Footer */
-
 #secContainer {
   background: #101528;
   display: flex;
@@ -316,8 +318,7 @@ main {
   }
 }
 
-/* Mobile */
-
+/* MOBILE */
 @media screen and (max-width: 767px) {
 
   #socialLinks {
@@ -347,7 +348,7 @@ main {
 }
 
 
-/* Tablet/Medium */
+/* TABLET/MEDIUM */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   #socialLinks {
       display: block;
@@ -389,7 +390,7 @@ dl, ol, ul {
 ol, ul {
   padding-left: 0;
 }
-
+/* -------------------------- ACERCA DE ----------------------- */
 .enlaces_acercaDe{
     text-decoration: none;
 }
@@ -413,6 +414,10 @@ ol, ul {
       background-color: #151042;
       color: #ffffff;
     }
+  }
+  
+  .card-articulos{
+    height: 18rem;
   }
 
   .card-nosotros{
