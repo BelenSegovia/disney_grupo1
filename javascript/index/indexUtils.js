@@ -17,6 +17,8 @@ export const crearTarjetaYModal = (metraje) => {
     const gridBody = document.querySelector('.grid-tendencias');
     const divCard = document.createElement('div');
     divCard.classList.add("card-disney");
+    divCard.getAttribute('name');
+    divCard.name = metraje.nombre;
 
 
     const cardImagen = document.createElement('div');
