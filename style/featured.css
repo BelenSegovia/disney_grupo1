@@ -33,3 +33,6 @@ a {
       color: #ffffff;
     }
   }
+  .filtro {
+    display: none;
+  }

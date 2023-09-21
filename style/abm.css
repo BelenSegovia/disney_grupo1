@@ -8,4 +8,7 @@ body {
     height: 50px;
     object-fit: cover;
 }
+.filtro {
+    display: none;
+}
 

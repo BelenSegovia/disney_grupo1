@@ -399,3 +399,6 @@ dl, ol, ul {
 ol, ul {
     padding-left: 0;
 }
+.filtro {
+    display: none;
+}
