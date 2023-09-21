@@ -19,7 +19,7 @@ export const crearFilaTabla = (metraje, indice) => {
     //Indice
 
     const tdIndice = document.createElement('td');
-    tdIndice.innerText = indice;
+    tdIndice.innerText = indice + 1;
     tr.appendChild(tdIndice);
 
     //Imagen
