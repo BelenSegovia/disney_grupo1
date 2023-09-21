@@ -1,140 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Facundo Vecino">
-    <meta name="description" content="Practicando CRUD">
-    <meta name="keywords" content="Agenda, Contacto, Contactos, JS">
-    <title>Disney+ - Admin</title>
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/abm.css">
-    <script defer
-        src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
-    </script>
-    <script defer 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-        crossorigin="anonymous">
-    </script>
-    <script defer type="module" src="../javascript/admin/metrajes/app.js"></script>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-              <a class="navbar-brand" href="#">Disney+</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link" href="/index.html">Inicio</a>
-                  <a class="nav-link active" aria-current="page" href="#">Admin</a>
-                  <a class="nav-link" href="/pages/categorias.html">Categorias</a>
-                </div>
-              </div>
-            </div>
-          </nav>
-    </header>
-    <main>
-        <div class="container my-4 text-center">
-            <h1>Cargar Pelicula</h1>
-        </div>
-        <section class="container mb-5">
-            <article class="row">
-                <form id="form">
-                    <fieldset class="mb-3">
-                        <label for="input-nombre" class="form-label">Nombre</label>
-                        <input 
-                            placeholder="Nombre de Pelicula/Serie" 
-                            type="text" 
-                            class="form-control" 
-                            id="input-nombre">
-                            <div class="invalid-feedback">
-                                Ingrese un nombre valido
-                            </div>
-                    </fieldset>
-                    <fieldset class="mb-3">
-                        <label for="select-pelicula-serie" class="form-label">Tipo de Metraje</label>
-                        <select class="form-select" id="input-tipo" aria-label="Default select example">
-                            <option value="0">Menu de opciones</option>
-                            <option value="1">Pelicula</option>
-                            <option value="2">Serie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Seleccione un tipo valido
-                        </div>
-                    </fieldset>
-                    <fieldset class="mb-3">
-                        <label for="input-imagen" class="form-label">Imagen</label>
-                        <input 
-                            placeholder="https://google.com" 
-                            type="text" 
-                            class="form-control" 
-                            id="input-imagen">
-                            <div class="invalid-feedback">
-                                Ingrese un enlace valido
-                            </div>
-                    </fieldset>
-                    <fieldset class="mb-3 form-check form-switch">
-                        <label for="input-publicada" class="form-check-label">Esta publicada?</label>
-                        <input 
-                            class="form-check-input" 
-                            type="checkbox" 
-                            role="switch" 
-                            id="input-publicada">
-                    </fieldset>
-                    <fieldset>
-                        <label for="select-categorias" class="form-label"
-                        >Seleccione la categoria</label
-                        >
-                        <select id="select-categorias" class="form-select">
-                            <option value="#">Seleccione una categoria</option>
-                        </select>
-                    </fieldset>
-                    <fieldset class="mb-3">
-                        <label for="input-descripcion" class="form-label">Descripcion</label>
-                        <textarea class="form-control" id="input-descripcion"></textarea>
-                        <div class="invalid-feedback">
-                            Escriba una Descripcion
-                        </div>
-                    </fieldset>
-                    <div class="text-end mt-3">
-                    <button type="submit" id="btnAdd" class="btn btn-danger">Guardar</button>
-                    <button type="submit" id="btnUpdate" class="btn btn-warning d-none">Actualizar Datos</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Facundo Vecino">
+        <meta name="description" content="Practicando CRUD">
+        <meta name="keywords" content="Agenda, Contacto, Contactos, JS">
+        <title>Disney+ - Admin</title>
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="/style/abm.css">
+        <script defer
+            src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+        </script>
+        <script defer 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous">
+        </script>
+        <script defer type="module" src="../javascript/admin/metrajes/app.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="py-3 navbar navbar-expand-lg bg-secondary">
+                <div class="container">
+                  <a class="navbar-brand" href="#">Disney+</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link" href="/index.html">Inicio</a>
+                      <a class="nav-link active" aria-current="page" href="#">Admin</a>
+                      <a class="nav-link" href="/pages/categorias.html">Categorias</a>
                     </div>
-                </form>
-            </article>
-        </section>
-        <section class="table-responsive mt-3">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Tipo</th>
-                        <th>Categoria</th>
-                        <th>Descripcion</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody-metrajes">
-
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <footer class="bg-secondary p-5 text-light">
-        <section class="container text-center">
-            <p>&copy; Todos los derechos reservados</p>
-        </section>
-
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main class="container-fluid py-4 bg-dark">
+            <div class="container my-4 py-4 text-center text-light">
+                <h1>Cargar Pelicula</h1>
+            </div>
+            <section class="container text-light">
+                <article class="row">
+                    <form id="form">
+                        <fieldset class="mb-3">
+                            <label for="input-nombre" class="form-label">Nombre</label>
+                            <input 
+                                placeholder="Nombre de Pelicula/Serie" 
+                                type="text" 
+                                class="form-control" 
+                                id="input-nombre">
+                                <div class="invalid-feedback">
+                                    Ingrese un nombre valido
+                                </div>
+                        </fieldset>
+                        <fieldset class="mb-3">
+                            <label for="select-pelicula-serie" class="form-label">Tipo de Metraje</label>
+                            <select class="form-select" id="input-tipo" aria-label="Default select example">
+                                <option value="0">Menu de opciones</option>
+                                <option value="1">Pelicula</option>
+                                <option value="2">Serie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Seleccione un tipo valido
+                            </div>
+                        </fieldset>
+                        <fieldset class="mb-3">
+                            <label for="input-imagen" class="form-label">Imagen</label>
+                            <input 
+                                placeholder="https://google.com" 
+                                type="text" 
+                                class="form-control" 
+                                id="input-imagen">
+                                <div class="invalid-feedback">
+                                    Ingrese un enlace valido
+                                </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="select-categorias" class="form-label"
+                            >Seleccione la categoria</label
+                            >
+                            <select id="select-categorias" class="form-select">
+                                <option value="#">Seleccione una categoria</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="mb-3">
+                            <label for="input-descripcion" class="form-label">Descripcion</label>
+                            <textarea class="form-control" id="input-descripcion"></textarea>
+                            <div class="invalid-feedback">
+                                Escriba una Descripcion
+                            </div>
+                        </fieldset>
+                        <div class="text-end mt-3">
+                        <button type="submit" id="btnAdd" class="btn btn-danger">Guardar</button>
+                        <button type="submit" id="btnUpdate" class="btn btn-warning d-none">Actualizar Datos</button>
+                        </div>
+                    </form>
+                </article>
+            </section>
+            <section class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Categoria</th>
+                            <th>Descripcion</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-metrajes">
+    
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer class="sidebar-footer">
+            <section class="d-flex text-center" id="secContainer">
+                <article class="boxInfo">
+                    <ol>
+                        <li>
+                            <a class="fw-medium" href="/pages/error404.html">Politica de privacidad</a>
+                        </li>
+                        <li>
+                            <a class="fw-medium" href="/pages/registro.html">Cancelar suscripcion</a>
+                        </li>
+                    </ol>
+                </article>
+                <article class="boxInfo">
+                    <ol>
+                        <li>
+                            <a class="fw-medium" href="/pages/error404.html">Acuerdo de suscripcion</a>
+                        </li>
+                        <li>
+                            <a class="fw-medium" href="/pages/acercaDe.html">Acerca de Disney+</a>
+                        </li>
+                    </ol>
+                </article>
+                <article class="boxInfo">
+                    <ol>
+                        <li>
+                            <a class="fw-medium" href="/pages/error404.html">Dispositivos compatibles</a>
+                        </li>
+                        <li>
+                            <a class="fw-medium" href="/pages/contacto.html">Ayuda</a>
+                        </li>
+                        
+                    </ol>
+                </article>
+                <article id="socialLinks">
+                    <p class="ms-3">Â© Disney. Todos los derechos reservados</p>
+                    <a href="/index.html"><img src="/img/logo/20220128173228!Disney+_logo.svg"
+                            alt="Logo Disney+"></a>
+                    <ol class="text-center">
+                        <ul>
+                            <a href="/pages/error404.html" target="_blank">Facebook</a>
+                            <a href="/pages/error404.html" target="_blank">Instagram</a>
+                            <a href="/pages/error404.html" target="_blank">Youtube</a>
+                        </ul>
+                    </ol>
+                </article>
+            </section>
     </footer>
-</body>
+    </body>
 </html>
