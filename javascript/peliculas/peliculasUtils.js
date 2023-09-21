@@ -1,23 +1,9 @@
 import { obtenerMetrajeDeLS } from "../admin/metrajes/abmUtils.js";
 
-export const cargarTabla = () => {
-    const metrajes = obtenerMetrajeDeLS();
-
-
-    const gridBody = document.querySelector('.grid-tendencias');
-    gridBody.innerHTML = '';
-
-
-    metrajes.forEach((metraje) => {
-        crearTarjetaYModal(metraje);
-    });
-};
-
 export const crearTarjetaYModal = (metraje) => {
     const gridBody = document.querySelector('.grid-tendencias');
     const divCard = document.createElement('div');
     divCard.classList.add("card-disney");
-
 
     const cardImagen = document.createElement('div');
     const img = document.createElement('img');
@@ -61,3 +47,21 @@ export const mostrarModalDetalle = (metraje) => {
         modal.classList.remove('modal--show');
     });
 };
+
+
+export const cargarTabla = () => {
+    const metrajes = obtenerMetrajeDeLS();
+    const peliculas = metrajes.filter(metraje => metraje.tipo === "Pelicula");
+    console.log(peliculas)
+
+
+    const gridBody = document.querySelector('.grid-tendencias');
+    gridBody.innerHTML = '';
+
+
+
+    peliculas.forEach((metraje) => {
+        crearTarjetaYModal(metraje)
+    });
+}
+

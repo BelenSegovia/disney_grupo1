@@ -1,18 +1,5 @@
 import { obtenerMetrajeDeLS } from "../admin/metrajes/abmUtils.js";
 
-export const cargarTabla = () => {
-    const metrajes = obtenerMetrajeDeLS();
-
-
-    const gridBody = document.querySelector('.grid-tendencias');
-    gridBody.innerHTML = '';
-
-
-    metrajes.forEach((metraje) => {
-        crearTarjetaYModal(metraje);
-    });
-};
-
 export const crearTarjetaYModal = (metraje) => {
     const gridBody = document.querySelector('.grid-tendencias');
     const divCard = document.createElement('div');
@@ -61,3 +48,20 @@ export const mostrarModalDetalle = (metraje) => {
         modal.classList.remove('modal--show');
     });
 };
+
+
+export const cargarTabla = () => {
+    const metrajes = obtenerMetrajeDeLS();
+    const series = metrajes.filter(metraje => metraje.tipo === "Serie");
+    console.log(series)
+
+
+    const gridBody = document.querySelector('.grid-tendencias');
+    gridBody.innerHTML = '';
+
+
+
+    series.forEach((metraje) => {
+        crearTarjetaYModal(metraje)
+    });
+}

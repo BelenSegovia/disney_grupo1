@@ -23,8 +23,8 @@
     <script defer type="module" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script defer type="module" src="/javascript/admin/metrajes/abm.js"></script>
     <script defer type="module" src="/javascript/admin/metrajes/abmUtils.js"></script>
-    <script defer type="module" src="/javascript/index/indexUtils.js"></script>
-    <script defer type="module" src="/javascript/index/app.js"></script>
+    <script defer type="module" src="/javascript/series/seriesUtils.js"></script>
+    <script defer type="module" src="/javascript/series/app.js"></script>
     <script defer type="module" src="/javascript/sidebar/app.js"></script>
     <script defer type="module" src="/javascript/slider.js"></script>
     <title>Disney+</title>
@@ -102,10 +102,10 @@
                 </li>
                 <li>
                     <i class="fa-solid fa-magnifying-glass btn_busqueda"></i>
-                    <input type="text" name="buscador" id="buscador" placeholder="Busqueda">
+                    <input type="text" placeholder="Busqueda">
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/index.html">
                         <i class="fa-solid fa-house"></i>
                         <span class="links-name">Inicio</span>
                     </a>
@@ -143,22 +143,22 @@
                 <div class="slider center">
                     <div class="slide">
                         <div class="cl">
-                            <img src="img/slider/Carrusel Avatar (1).png" alt="Avatar">
+                            <img src="/img/slider/Carrusel Avatar (1).png" alt="Avatar">
                         </div>
                     </div>
                     <div class="slide">
                         <div class="cl">
-                                <img src="img/slider/Carrusel Guardianes (1).png" alt="Guardianes de la Galaxia">
+                                <img src="/img/slider/Carrusel Guardianes (1).png" alt="Guardianes de la Galaxia">
                         </div>
                     </div>
                     <div class="slide">
                         <div class="cl">
-                                <img src="img/slider/Carrusel Sirenita (1).png" alt="La Sirenita">
+                                <img src="/img/slider/Carrusel Sirenita (1).png" alt="La Sirenita">
                         </div>
                     </div>
                     <div class="slide">
                         <div class="cl">
-                                <img src="img/slider/Carrusel StarWars (1).png" alt="StarWars">
+                                <img src="/img/slider/Carrusel StarWars (1).png" alt="StarWars">
                         </div>
                     </div>
                 </div>
@@ -166,31 +166,31 @@
         </section>
         <section class="container-disney-cards disney-rows">
             <article class="grid">
-                <div class="card-disney" name="Disney" >
+                <div class="card-disney">
                     <div class="item-border">
                         <img src="/img/disney/disney-txt.png" alt="Disney" class="item-image">
                         <img src="/img/disney/disney.gif" alt="Gif de Disney" class="item-image hover-image">
                     </div>
                 </div>
-                <div class="card-disney" name="Pixar">
+                <div class="card-disney">
                     <div class="item-border">
                         <img src="/img/disney/pixar-txt.png" alt="Pixar" class="item-image">
                         <img src="/img/disney/pixar.gif" alt="Gif de Pixar" class="item-image hover-image">
                     </div>
                 </div>
-                <div class="card-disney" name="Marvel">
+                <div class="card-disney">
                     <div class="item-border">
                         <img src="/img/disney/marvel-txt.png" alt="Marvel" class="item-image">
                         <img src="/img/disney/marvel.gif" alt="Gif de Marvel" class="item-image hover-image">
                     </div>
                 </div>
-                <div class="card-disney" name="StarWars">
+                <div class="card-disney">
                     <div class="item-border">
                         <img src="/img/disney/star-txt.png" alt="StarWars" class="item-image">
                         <img src="/img/disney/starwars.gif" alt="Gif de StarWars" class="item-image hover-image">
                     </div>
                 </div>
-                <div class="card-disney" name="National">
+                <div class="card-disney">
                     <div class="item-border">
                         <img src="/img/disney/national-txt.png" alt="National" class="item-image">
                         <img src="/img/disney/national.gif" alt="Gif de National" class="item-image hover-image">
@@ -199,55 +199,54 @@
             </article>
         </section>
         <section class="container-fluid mt-3 mb-2">
-            <h4 class="text-light pt-3 ps-2 mt-2">Tendencias</h4>
+            <h4 class="text-light pt-3 ps-2 mt-2">Series</h4>
             <article class="grid grid-tendencias">
                 
             </article>     
         </section>
-        
         <section class="container-fluid mt-3">
             <h4 class="text-light pt-3 ps-2 mt-2">Novedades de Disney+</h4>
             <article class="grid-alto">
-                <div class="item-borde card-alto card-disney" name="La Vida de Dug">
-                    <img class="item-image" src="./img/disney/dugPerro.jfif" alt="La Vida de Dug">
+                <div class="item-borde card-alto">
+                    <img class="item-image" src="/img/disney/dugPerro.jfif" alt="La Vida de Dug">
                 </div>
-                <div class="card-alto card-disney" name="Al agua, Pato">
-                    <img class="item-image" src="./img/disney/aguaPato.jfif" alt="Al agua, Pato">
+                <div class="card-alto">
+                    <img class="item-image" src="/img/disney/aguaPato.jfif" alt="Al agua, Pato">
                 </div>
-                <div class="card-alto card-disney" name="Chip y Dale">
-                    <img class="item-image" src="./img/disney/chipYdale.jfif" alt="Chip y Dale">
+                <div class="card-alto">
+                    <img class="item-image" src="/img/disney/chipYdale.jfif" alt="Chip y Dale">
                 </div>
-                <div class="card-alto card-disney" name="Spidey">
-                    <img class="item-image" src="./img/disney/spidey.jfif" alt="Spidey, sorprendentes amigos">
+                <div class="card-alto">
+                    <img class="item-image" src="/img/disney/spidey.jfif" alt="Spidey, sorprendentes amigos">
                 </div>
             </article>
         </section>
         <section class="container-fluid mt-3 mb-4">
             <h4 class="text-light pt-3 ps-2 mt-2">Principales de Marvel</h4>
             <article class="grid">
-                    <div class="card-disney" name="spiderman">
+                    <div class="card-disney">
                             <div class="item-border">
-                                <img class="item-image" src="./img/disney/spiderman.jfif" alt="Spider-Man lejos de casa">
+                                <img class="item-image" src="/img/disney/spiderman.jfif" alt="Spider-Man lejos de casa">
                             </div>
                     </div>
-                <div class="card-disney" name="Loki">
+                <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/loki.jfif" alt="Loki">
+                        <img class="item-image" src="/img/disney/loki.jfif" alt="Loki">
                     </div>
                 </div>
-                <div class="card-disney" name="Invasion secreta">
+                <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/invasion.jfif" alt="Invasión Secreta">
+                        <img class="item-image" src="/img/disney/invasion.jfif" alt="Invasión Secreta">
                     </div>
                 </div>
-                <div class="card-disney" name="Moon Knight">
+                <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/moonknight.jfif" alt="Moon Knight">
+                        <img class="item-image" src="/img/disney/moonknight.jfif" alt="Moon Knight">
                     </div>
                 </div>
-                <div class="card-disney" name="Eternals">
+                <div class="card-disney">
                     <div class="item-border">
-                        <img class="item-image" src="./img/disney/eternals.jfif" alt="Eternals">
+                        <img class="item-image" src="/img/disney/eternals.jfif" alt="Eternals">
                     </div>
                 </div>
             </article>     
@@ -268,7 +267,7 @@
                     <a href="#" class="modal__close">Cerrar</a>
                 </div>
             </div>
-        </section>                 
+        </section>
     </main>
     <footer class="sidebar-footer">
         <section class="d-flex text-center" id="secContainer">
