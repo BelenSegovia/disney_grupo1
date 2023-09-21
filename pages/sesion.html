@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Grupo 1 - RollingCode Comision63i">
+    <meta name="description" content="Pagina de Disney+ del Proyecto 2 del segundo modulo del cursado en RollingCode">
+    <meta name="keywords" content="Disney+, DisneyPlus, Disney, Proyecto 2, RollingCode, Grupo 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      href="https://static-assets.bamgrid.com/product/disneyplus/favicons/safari-pinned-tab.f78e1debd6a0496471c542612d2e4bc5.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="shortcut icon" href="/img/logo/20220128173228!Disney+_logo.svg" type="image/x-icon">
+    <script defer type="module" src="path-to-the-file/splide.min.js"></script>
+    <script defer type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer type="module" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script defer type="module" src="/javascript/admin/metrajes/abm.js"></script>
+    <script defer type="module" src="/javascript/admin/metrajes/abmUtils.js"></script>
+    <script defer type="module" src="/javascript/index/indexUtils.js"></script>
+    <script defer type="module" src="/javascript/index/app.js"></script>
+    <script defer type="module" src="/javascript/sidebar/app.js"></script>
+    <script defer type="module" src="/javascript/slider.js"></script>
+    <title>Disney+</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-sesion">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./registro.html">
+                <div class="logo">
+                    <img src="/img/logo/20220128173228!Disney+_logo.svg" alt="Logo de disney+">
+                </div>
+              </a>
+            </div>
+          </nav>
+
+    </header>
+        <main class="container my-5">
+            <h1 class="display-5 text-light">Iniciar sesion en Disney+</h1>
+            <hr />
+            <form class="bg-secondary rounded p-3 text-white" id="form-login">
+              <div class="alert alert-warning d-none" id="alert-login">
+                Las credenciales no son válidas.
+              </div>
+              <fieldset>
+                <label for="input-usuario" class="form-label">Usuario</label>
+                <input type="text" id="input-usuario" class="form-control" />
+                <div class="invalid-feedback">Ingrese un usuario valido</div>
+              </fieldset>
+              <fieldset class="mt-2">
+                <label for="input-contraseña" class="form-label">Contraseña</label>
+                <input type="password" id="input-contraseña" class="form-control" />
+                <div class="invalid-feedback">Ingrese una contraseña valida</div>
+              </fieldset>
+              <div class="text-end mt-3">
+                <button type="submit" class="btn btn-dark">Iniciar sesion</button>
+              </div>
+            </form>
+          </main> 
+<footer class="sidebar-footer">
+    <section class="d-flex text-center" id="sesionContainer">
+        <article class="boxInfo">
+            <ol>
+                <li>
+                    <a class="fw-medium" href="/pages/error404.html">Politica de privacidad</a>
+                </li>
+                <li>
+                    <a class="fw-medium" href="/pages/error404.html">Cancelar suscripcion</a>
+                </li>
+            </ol>
+        </article>
+        <article class="boxInfo">
+            <ol>
+                <li>
+                    <a class="fw-medium" href="/pages/error404.html">Acuerdo de suscripcion</a>
+                </li>
+                <li>
+                    <a class="fw-medium" href="/pages/acercaDe.html">Acerca de Disney+</a>
+                </li>
+            </ol>
+        </article>
+        <article class="boxInfo">
+            <ol>
+                <li>
+                    <a class="fw-medium" href="/pages/error404.html">Dispositivos compatibles</a>
+                </li>
+                <li>
+                    <a class="fw-medium" href="/pages/contacto.html">Ayuda</a>
+                </li>
+                
+            </ol>
+        </article>
+        <article id="socialLinks">
+            <p class="ms-3">© Disney. Todos los derechos reservados</p>
+            <a href="#"><img src="/img/logo/20220128173228!Disney+_logo.svg"
+                    alt="Logo Disney+"></a>
+            <ol class="text-center">
+                <ul>
+                    <a href="/pages/error404.html" target="_blank">Facebook</a>
+                    <a href="/pages/error404.html" target="_blank">Instagram</a>
+                    <a href="/pages/error404.html" target="_blank">Youtube</a>
+                </ul>
+            </ol>
+        </article>
+    </section>
+</footer>   
+<script type="module" src="../javascript/logueo/login.js"></script> 
+<script
+defer
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+crossorigin="anonymous"
+></script>
+<script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -248,6 +248,19 @@ main {
     justify-content: space-around;
 }
 
+#sesionContainer {
+    background: #101528;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    transition: all 0.5s ease;
+    justify-content: space-around;
+}
+
+.bg-sesion{
+    background-color: #101528;
+}
+
 
 .boxInfo {
     margin: 3rem;
@@ -398,4 +411,7 @@ dl, ol, ul {
 }
 ol, ul {
     padding-left: 0;
+}
+.filtro {
+    display: none;
 }
