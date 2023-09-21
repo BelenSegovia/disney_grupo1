@@ -416,6 +416,10 @@ ol, ul {
       color: #ffffff;
     }
   }
+  
+  .card-articulos{
+    height: 18rem;
+  }
 
   .card-nosotros{
     width: 13rem;
