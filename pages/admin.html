@@ -25,87 +25,86 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="py-3 navbar navbar-expand-lg bg-dark-subtle">
             <div class="container">
-              <a class="navbar-brand" href="#">Disney+</a>
+              <a class="navbar-brand" href="../index.html">Disney+</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="/index.html">Inicio</a>
+                  <a class="nav-link" href="../index.html">Inicio</a>
                   <a class="nav-link active" aria-current="page" href="#">Admin</a>
                   <a class="nav-link" href="/pages/categorias.html">Categorias</a>
+                      <button class="nav-link text-danger d-flex text-end" id="boton-salir">
+                        Salir
+                      </button>
                 </div>
               </div>
             </div>
           </nav>
     </header>
-    <main class="container my-4">
-        <h1>Cargar Pelicula</h1>
-        <hr>
-        <section class="bg-secondary p-3 rounded text-light">
-            <form id="form">
-                <fieldset class="mb-3">
-                    <label for="input-nombre" class="form-label">Nombre</label>
-                    <input 
-                        placeholder="Nombre de Pelicula/Serie" 
-                        type="text" 
-                        class="form-control" 
-                        id="input-nombre">
+    <main class="bg-dark py-4">
+        <div class="container my-4 text-center text-light">
+            <h1>Cargar Pelicula</h1>
+        </div>
+        <section class="container mb-5">
+            <article class="row text-light">
+                <form id="form">
+                    <fieldset class="mb-3">
+                        <label for="input-nombre" class="form-label">Nombre</label>
+                        <input 
+                            placeholder="Nombre de Pelicula/Serie" 
+                            type="text" 
+                            class="form-control" 
+                            id="input-nombre">
+                            <div class="invalid-feedback">
+                                Ingrese un nombre valido
+                            </div>
+                    </fieldset>
+                    <fieldset class="mb-3">
+                        <label for="select-pelicula-serie" class="form-label">Tipo de Metraje</label>
+                        <select class="form-select" id="input-tipo" aria-label="Default select example">
+                            <option value="0">Menu de opciones</option>
+                            <option value="1">Pelicula</option>
+                            <option value="2">Serie</option>
+                        </select>
                         <div class="invalid-feedback">
-                            Ingrese un nombre valido
+                            Seleccione un tipo valido
                         </div>
-                </fieldset>
-                <fieldset class="mb-3">
-                    <label for="select-pelicula-serie" class="form-label">Tipo de Metraje</label>
-                    <select class="form-select" id="input-tipo" aria-label="Default select example">
-                        <option value="0">Menu de opciones</option>
-                        <option value="1">Pelicula</option>
-                        <option value="2">Serie</option>
-                      </select>
-                    <div class="invalid-feedback">
-                        Seleccione un tipo valido
-                    </div>
-                </fieldset>
-                <fieldset class="mb-3">
-                    <label for="input-imagen" class="form-label">Imagen</label>
-                    <input 
-                        placeholder="https://google.com" 
-                        type="text" 
-                        class="form-control" 
-                        id="input-imagen">
+                    </fieldset>
+                    <fieldset class="mb-3">
+                        <label for="input-imagen" class="form-label">Imagen</label>
+                        <input 
+                            placeholder="https://google.com" 
+                            type="text" 
+                            class="form-control" 
+                            id="input-imagen">
+                            <div class="invalid-feedback">
+                                Ingrese un enlace valido
+                            </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="select-categorias" class="form-label"
+                        >Seleccione la categoria</label
+                        >
+                        <select id="select-categorias" class="form-select">
+                            <option value="#">Seleccione una categoria</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="mb-3">
+                        <label for="input-descripcion" class="form-label">Descripcion</label>
+                        <textarea class="form-control" id="input-descripcion"></textarea>
                         <div class="invalid-feedback">
-                            Ingrese un enlace valido
+                            Escriba una Descripcion
                         </div>
-                </fieldset>
-                <fieldset class="mb-3 form-check form-switch">
-                    <label for="input-publicada" class="form-check-label">Esta publicada?</label>
-                    <input 
-                        class="form-check-input" 
-                        type="checkbox" 
-                        role="switch" 
-                        id="input-publicada">
-                </fieldset>
-                <fieldset>
-                    <label for="select-categorias" class="form-label"
-                      >Seleccione la categoria</label
-                    >
-                    <select id="select-categorias" class="form-select">
-                        <option value="#">Seleccione una categoria</option>
-                    </select>
-                  </fieldset>
-                <fieldset class="mb-3">
-                    <label for="input-descripcion" class="form-label">Descripcion</label>
-                    <textarea class="form-control" id="input-descripcion"></textarea>
-                    <div class="invalid-feedback">
-                        Escriba una Descripcion
+                    </fieldset>
+                    <div class="text-end mt-3">
+                    <button type="submit" id="btnAdd" class="btn btn-danger">Guardar</button>
+                    <button type="submit" id="btnUpdate" class="btn btn-warning d-none">Actualizar Datos</button>
                     </div>
-                </fieldset>
-                <div class="text-end mt-3">
-                <button type="submit" class="btn btn-danger">Guardar</button>
-                </div>
-            </form>
+                </form>
+            </article>
         </section>
         <section class="table-responsive mt-3">
             <table class="table">
@@ -126,11 +125,53 @@
             </table>
         </section>
     </main>
-    <footer class="bg-secondary p-5 text-light">
-        <section class="container text-center">
-            <p>&copy; Todos los derechos reservados</p>
+    <footer class="sidebar-footer">
+        <section class="d-flex text-center" id="secContainer">
+            <article class="boxInfo">
+                <ol>
+                    <li>
+                        <a class="fw-medium" href="/pages/error404.html">Politica de privacidad</a>
+                    </li>
+                    <li>
+                        <a class="fw-medium" href="/pages/registro.html">Cancelar suscripcion</a>
+                    </li>
+                </ol>
+            </article>
+            <article class="boxInfo">
+                <ol>
+                    <li>
+                        <a class="fw-medium" href="/pages/error404.html">Acuerdo de suscripcion</a>
+                    </li>
+                    <li>
+                        <a class="fw-medium" href="/pages/acercaDe.html">Acerca de Disney+</a>
+                    </li>
+                </ol>
+            </article>
+            <article class="boxInfo">
+                <ol>
+                    <li>
+                        <a class="fw-medium" href="/pages/error404.html">Dispositivos compatibles</a>
+                    </li>
+                    <li>
+                        <a class="fw-medium" href="/pages/contacto.html">Ayuda</a>
+                    </li>
+                    
+                </ol>
+            </article>
+            <article id="socialLinks">
+                <p class="ms-3">© Disney. Todos los derechos reservados</p>
+                <a href="/index.html"><img src="/img/logo/20220128173228!Disney+_logo.svg"
+                        alt="Logo Disney+"></a>
+                <ol class="text-center">
+                    <ul>
+                        <a href="/pages/error404.html" target="_blank">Facebook</a>
+                        <a href="/pages/error404.html" target="_blank">Instagram</a>
+                        <a href="/pages/error404.html" target="_blank">Youtube</a>
+                    </ul>
+                </ol>
+            </article>
         </section>
-
+        <script type="module" src="../javascript/logueo/logout.js"></script>
     </footer>
-</body>
+    </body>
 </html>

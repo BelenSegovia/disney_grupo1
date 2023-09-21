@@ -3,6 +3,99 @@
     margin-top: 30px;
 }
 
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal__container {
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #040714; /* Azul oscuro */
+    max-width: 600px;
+    height: 600px;
+    width: 100%;
+    text-align: left;
+    color: #fff; /* Color de texto blanco */
+  }
+  
+  /* Estilo para la imagen de la película */
+  .modal__image img {
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .modal__details {
+    padding: 20px;
+  }
+  /* Estilo para el título de la película */
+  .modal__title {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para los detalles de la película */
+  .modal__paragraph {
+    margin-top: 10px;
+  }
+  
+  /* Estilo para el grupo de acciones (íconos y enlaces) */
+  .modal__actions {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para los íconos */
+  .modal__actions i {
+    cursor: pointer;
+    font-size: 34px;
+    margin-right: 20px;
+    color: #fff; /* Color de íconos blanco */
+  }
+  
+  /* Estilo para cerrar el modal */
+  .modal__close {
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none;
+    background: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: .5em 2em;
+  }
+
+  .modal__close:hover {
+    background-color: #6610f2;
+  }
+
 .cl img {
     width: 100%;
     height: auto;
@@ -56,6 +149,10 @@
     border-radius: 4px;
     z-index: 2;
   }
+
+  .slick-prev:before {
+    content: '';
+}
 /* Destacadas */
 .slide {
     border: 2px solid transparent; 
@@ -178,4 +275,15 @@
     .item-border {
         border: 4px solid rgb(249, 249, 249, 0.1);
     }
+}
+
+@media screen and (max-width:768px) {
+    .modal__container {
+        padding: 2em 1.5em;
+    }
+
+    .modal__title {
+        font-size: 2rem;
+    }
+    
 }

@@ -29,27 +29,17 @@ export const crearFilaTabla = (categoria, indice) => {
 
     //Botones
     const tdBotones = document.createElement('td');
-    const btnEditar = document.createElement('button');
     const btnEliminar = document.createElement('button');
 
     tdBotones.classList.add('d-flex', 'gap')
-    btnEditar.type = "button"
     btnEliminar.type = "button"
-    btnEditar.classList.add('btn', 'btn-warning', 'btn-sm', 'me-2');
     btnEliminar.classList.add('btn', 'btn-danger', 'btn-sm');
-    btnEditar.innerText = "Editar";
     btnEliminar.innerText = "Eliminar";
-
-
-    btnEditar.onclick = () => {
-        prepararEdicionCategoria(categoria)
-    }
 
     btnEliminar.onclick = () => {
         eliminarCategoria(categoria)
     }
     
-    tdBotones.appendChild(btnEditar);
     tdBotones.appendChild(btnEliminar);
 
     tr.appendChild(tdBotones)

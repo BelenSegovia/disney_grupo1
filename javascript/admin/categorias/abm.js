@@ -11,8 +11,6 @@ export const añadirCategoria = (categoria) => {
     })
 }
 
-export const editarCategoria = () => {};
-
 export const eliminarCategoria = (categoria) => {
     swal.fire({
         title: "¿Estas seguro?",

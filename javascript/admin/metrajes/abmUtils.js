@@ -41,12 +41,20 @@ export const crearFilaTabla = (metraje, indice) => {
     //Tipo
 
     const tdTipo = document.createElement('td');
-    tdTipo.innerText = metraje.tipo;
+    tdTipo.innerText = metraje.tipo
     tr.appendChild(tdTipo);
 
     //Categoria
     const tdCategoria = document.createElement('td');
-    tdCategoria.innerText = metraje.categoria;
+    const categoriaTexto = metraje.categoria;
+
+    // Comprobar si se encontró un valor en categoriasTexto
+    if (categoriaTexto !== undefined) {
+    tdCategoria.innerText = categoriaTexto;
+    } else {
+    tdCategoria.innerText = "Categoría no encontrada"; // O cualquier otro mensaje que desees mostrar
+    }
+
     tr.appendChild(tdCategoria);
 
     //Descripcion
@@ -69,7 +77,7 @@ export const crearFilaTabla = (metraje, indice) => {
 
 
     btnEditar.onclick = () => {
-        console.log(`Editar ${metraje.id}`)
+        prepararEdicionMetraje(metraje.id)
     }
 
     btnEliminar.onclick = () => {
@@ -108,4 +116,33 @@ export const cargarSelectCategorias = (categoria, indice) => {
     option.value = indice;
   
     selectCategorias.appendChild(option);
-  };
+};
+
+const prepararEdicionMetraje = (id) => {
+    const metrajes = obtenerMetrajeDeLS();
+    const metrajeSeleccionado =  metrajes.find((item) => item.id === id)
+
+    const campoNombre = document.getElementById('input-nombre');
+    const campoTipo = document.getElementById('input-tipo');
+    const campoImagen = document.getElementById('input-imagen');
+    const campoDescripcion = document.getElementById('input-descripcion');
+    const campoCategoria = document.getElementById('select-categorias');
+
+    campoNombre.value = metrajeSeleccionado.nombre;
+    campoTipo.value = metrajeSeleccionado.tipo;
+    campoImagen.value = metrajeSeleccionado.imagen;
+    campoDescripcion.value = metrajeSeleccionado.descripcion;
+    campoCategoria.value = metrajeSeleccionado.categoria;
+
+    sessionStorage.setItem('idMetraje', id);
+}
+
+export const estaEditando = () => {
+    const id = sessionStorage.getItem("idMetraje");
+
+    if(id === null){
+        return false;
+    } else {
+        return true;
+    }
+}
